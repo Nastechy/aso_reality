@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, easeOut } from 'framer-motion';
-import { Shield, CreditCard, Users, } from 'lucide-react';
+import { Shield, CreditCard, Users } from 'lucide-react';
 
 const WhyChooseAsoRealty = () => {
     const benefits = [
@@ -49,45 +49,50 @@ const WhyChooseAsoRealty = () => {
             scale: 1,
             transition: {
                 duration: 0.6,
-                ease: easeOut // <-- fixed
+                ease: easeOut
             }
         }
     };
-
-    // const iconVariants = {
-    //     hidden: {
-    //         scale: 0,
-    //         rotate: -90
-    //     },
-    //     visible: {
-    //         scale: 1,
-    //         rotate: 0,
-    //         transition: {
-    //             duration: 0.6,
-    //             delay: 0.2,
-    //             ease: backOut, // <-- fixed
-    //             type: "spring",
-    //             bounce: 0.4
-    //         }
-    //     }
-    // };
 
     return (
         <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-2 md:px-4">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     className="text-center mb-16"
-                    initial={{ opacity: 0, y: -30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        hidden: {},
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.22
+                            }
+                        }
+                    }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    <motion.h2
+                        className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+                        initial={{ opacity: 0, y: -30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
                         Why Choose Aso Realty?
-                    </h2>
-                    <p className="text-base md:text-lg text-gray-600 mb-2 max-w-2xl mx-auto">
+                    </motion.h2>
+                    <motion.p
+                        className="text-base md:text-lg text-gray-600 mb-2 max-w-2xl mx-auto"
+                        initial={{ opacity: 0, y: 28 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.15, ease: [0.23, 1, 0.32, 1] }}
+                    >
                         Experience peace of mind, security, and true value with a partner you can trust for all your real estate needs.
-                    </p>
-                    <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-[#08194A] mx-auto rounded-full"></div>
+                    </motion.p>
+                    <motion.div
+                        className="w-24 h-1 bg-gradient-to-r from-red-500 to-[#08194A] mx-auto rounded-full"
+                        initial={{ opacity: 0, scaleX: 0.3 }}
+                        animate={{ opacity: 1, scaleX: 1 }}
+                        transition={{ duration: 0.6, delay: 0.35, ease: [0.23, 1, 0.32, 1] }}
+                        style={{ originX: 0.5 }}
+                    />
                 </motion.div>
 
                 <motion.div
@@ -107,23 +112,23 @@ const WhyChooseAsoRealty = () => {
                             }}
                             className="relative"
                         >
-                            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 text-center relative overflow-hidden">
-
+                            <div
+                                className="bg-white rounded-2xl p-8 shadow-lg text-center relative overflow-hidden"
+                                style={{
+                                    boxShadow: "0 8px 32px 0 #08194A33" // custom shadow color
+                                }}
+                            >
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-full blur-3xl opacity-30 transform translate-x-16 -translate-y-16"></div>
                                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-gray-100 rounded-full blur-2xl opacity-50 transform -translate-x-12 translate-y-12"></div>
 
                                 <div className="relative z-10">
-
-                                    <motion.div
-                                        className="flex justify-center mb-6"
-                                    // variants={iconVariants}
-                                    >
+                                    <div className="flex justify-center mb-6">
                                         <div className="p-4 bg-red-50 rounded-full">
                                             <span className="h-6 w-6 flex items-center justify-center text-[#08194A]">
                                                 {React.cloneElement(benefit.icon, { size: 20, color: "#08194A" })}
                                             </span>
                                         </div>
-                                    </motion.div>
+                                    </div>
 
                                     <motion.h3
                                         className="text-xl font-bold text-gray-900 mb-4"
@@ -142,10 +147,7 @@ const WhyChooseAsoRealty = () => {
                                         {benefit.description}
                                     </motion.p>
                                 </div>
-
                             </div>
-
-                            <div className="absolute inset-0 bg-red-500 rounded-2xl opacity-0 blur-xl -z-10 transform scale-95"></div>
                         </motion.div>
                     ))}
                 </motion.div>
