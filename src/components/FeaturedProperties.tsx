@@ -20,6 +20,9 @@ export default function FeaturedPropertiesSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Explore Our Featured Properties
           </h2>
+          <p className="text-base md:text-lg text-gray-600 mb-2 max-w-2xl mx-auto">
+            Discover a curated selection of the finest homes and investment opportunities available now.
+          </p>
           <div className="w-24 h-1 bg-gradient-to-r from-[#08194A] to-red-600 mx-auto rounded-full"></div>
         </div>
 
@@ -31,8 +34,8 @@ export default function FeaturedPropertiesSection() {
             >
               <div className="relative">
                 <Image
-                  width={0}
-                  height={0}
+                  width={400}
+                  height={192}
                   src={property.images[0]}
                   alt={property.title}
                   className="w-full h-48 object-cover"

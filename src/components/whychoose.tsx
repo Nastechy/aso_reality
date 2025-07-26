@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, easeOut } from 'framer-motion';
-import { Shield, CreditCard, Users,  } from 'lucide-react';
+import { Shield, CreditCard, Users, } from 'lucide-react';
 
 const WhyChooseAsoRealty = () => {
     const benefits = [
@@ -84,6 +84,9 @@ const WhyChooseAsoRealty = () => {
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                         Why Choose Aso Realty?
                     </h2>
+                    <p className="text-base md:text-lg text-gray-600 mb-2 max-w-2xl mx-auto">
+                        Experience peace of mind, security, and true value with a partner you can trust for all your real estate needs.
+                    </p>
                     <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-[#08194A] mx-auto rounded-full"></div>
                 </motion.div>
 

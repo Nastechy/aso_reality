@@ -121,6 +121,14 @@ const VisionMissionComponent: React.FC = () => {
                     >
                         Vision & Mission
                     </motion.h2>
+                    <motion.p
+                        className="text-base md:text-lg text-gray-100 mb-3 max-w-2xl mx-auto"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                    >
+                        Empowering families and building thriving communities through innovation, trust, and excellence.
+                    </motion.p>
                     <motion.div
                         className="w-24 h-1 bg-gradient-to-r from-[#08194A] to-red-600 mx-auto rounded-full"
                         initial={{ width: 0 }}
