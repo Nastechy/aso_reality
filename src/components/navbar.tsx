@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import Link from "next/link"
-import { usePathname, useRouter } from "next/navigation"
+import { usePathname } from "next/navigation"
 
 const navLinks = [
     { label: "Home", id: "home", route: "/" },
@@ -19,19 +19,19 @@ const navLinks = [
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const [activeLink, setActiveLink] = useState<string | null>(null)
-    const router = useRouter()
+    // const [, setActiveLink] = useState<string | null>(null)
+    // const router = useRouter()
     const pathname = usePathname()
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
-    const handleExploreProp = () => {
-        setActiveLink("/contact")
-        router.push("/contact")
-        if (isMenuOpen) {
-            setIsMenuOpen(false)
-        }
-    }
+    // const handleExploreProp = () => {
+    //     setActiveLink("/contact")
+    //     router.push("/contact")
+    //     if (isMenuOpen) {
+    //         setIsMenuOpen(false)
+    //     }
+    // }
 
     return (
         <nav className="flex items-center justify-between md:px-20 px-3 shadow sticky top-0 z-50">

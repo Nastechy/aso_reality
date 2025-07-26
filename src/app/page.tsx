@@ -3,8 +3,9 @@ import About from "@/components/aboutContent";
 import ContactSection from "@/components/contactus";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
-import OurTeamSection from "@/components/ourteam";
+// import OurTeamSection from "@/components/ourteam";
 import StatsComponent from "@/components/stat";
+import TestimonialSection from "@/components/testimonial";
 import VisionMissionComponent from "@/components/visionandmission";
 import WhyChooseAsoRealty from "@/components/whychoose";
 
@@ -20,7 +21,8 @@ export default function Home() {
         <VisionMissionComponent />
         <FeaturedPropertiesSection />
         <WhyChooseAsoRealty />
-        <OurTeamSection />
+        <TestimonialSection />
+        {/* <OurTeamSection /> */}
         <ContactSection />
         <Footer />
       </div>

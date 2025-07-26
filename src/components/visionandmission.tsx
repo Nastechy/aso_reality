@@ -1,8 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import React, { useRef } from "react";
+import { motion, useInView, easeInOut, Easing } from "framer-motion";
 
 interface SectionData {
     id: string;
@@ -11,32 +10,37 @@ interface SectionData {
     icon: React.ReactNode;
 }
 
+// Define custom cubic bezier for ease (typed as Easing)
+const customEase: Easing = [0.25, 0.25, 0.25, 0.75];
+
 const VisionMissionComponent: React.FC = () => {
-    const ref = useRef(null);
+    const ref = useRef<HTMLDivElement | null>(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     const sections: SectionData[] = [
         {
-            id: 'mission',
-            title: 'Our Mission',
-            content: 'We empower families by connecting them with exceptional and innovative real estate solutions, creating opportunities that transform lives, build communities, and establish lasting relationships that define for everyone we serve lasting relationships that define for lasting .',
+            id: "mission",
+            title: "Our Mission",
+            content:
+                "We empower families by connecting them with exceptional and innovative real estate solutions, creating opportunities that transform lives, build communities, and establish lasting relationships for everyone we serve.",
             icon: (
                 <svg className="w-12 h-12 text-[#981314]" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L2 7v10c0 5.55 3.84 10 9 11 1.09-.87 2.02-1.99 2.5-3.5.3-.94.5-1.94.5-3 0-5.52-4.48-10-10-10z" />
                     <circle cx="12" cy="12" r="3" />
                 </svg>
-            )
+            ),
         },
         {
-            id: 'vision',
-            title: 'Our Vision',
-            content: 'We envision a future where every family has access to a thriving, secure community that nurtures growth, embraces diversity, and champions social sustainability. Our goal is to create lasting partnerships that transform lives while building exceptional communities.',
+            id: "vision",
+            title: "Our Vision",
+            content:
+                "We envision a future where every family has access to a thriving, secure community that nurtures growth, embraces diversity, and champions social sustainability. Our goal is to create lasting partnerships that transform lives while building exceptional communities.",
             icon: (
                 <svg className="w-12 h-12 text-[#981314]" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
-            )
-        }
+            ),
+        },
     ];
 
     const containerVariants = {
@@ -45,16 +49,16 @@ const VisionMissionComponent: React.FC = () => {
             opacity: 1,
             transition: {
                 duration: 0.6,
-                staggerChildren: 0.3
-            }
-        }
+                staggerChildren: 0.3,
+            },
+        },
     };
 
     const headerVariants = {
         hidden: {
             opacity: 0,
             y: -50,
-            scale: 0.8
+            scale: 0.8,
         },
         visible: {
             opacity: 1,
@@ -62,16 +66,16 @@ const VisionMissionComponent: React.FC = () => {
             scale: 1,
             transition: {
                 duration: 0.8,
-                ease: [0.25, 0.25, 0.25, 0.75]
-            }
-        }
+                ease: customEase,
+            },
+        },
     };
 
     const cardVariants = {
         hidden: {
             opacity: 0,
             y: 100,
-            rotateX: -15
+            rotateX: -15,
         },
         visible: {
             opacity: 1,
@@ -79,27 +83,9 @@ const VisionMissionComponent: React.FC = () => {
             rotateX: 0,
             transition: {
                 duration: 0.8,
-                ease: [0.25, 0.25, 0.25, 0.75]
-            }
-        }
-    };
-
-    const iconVariants = {
-        hidden: {
-            scale: 0,
-            rotate: -180
+                ease: customEase,
+            },
         },
-        visible: {
-            scale: 1,
-            rotate: 0,
-            transition: {
-                duration: 0.6,
-                delay: 0.2,
-                ease: "backOut",
-                type: "spring",
-                bounce: 0.4
-            }
-        }
     };
 
     const floatingVariants = {
@@ -110,9 +96,9 @@ const VisionMissionComponent: React.FC = () => {
             transition: {
                 duration: 4,
                 repeat: Infinity,
-                ease: "easeInOut"
-            }
-        }
+                ease: easeInOut,
+            },
+        },
     };
 
     return (
@@ -124,15 +110,12 @@ const VisionMissionComponent: React.FC = () => {
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
             >
-                <motion.div
-                    className="text-center mb-16"
-                    variants={headerVariants}
-                >
+                <motion.div className="text-center mb-16" variants={headerVariants}>
                     <motion.h2
                         className="text-4xl md:text-5xl font-bold text-white mb-4"
                         whileHover={{
                             scale: 1.05,
-                            color: "#dc2626"
+                            color: "#dc2626",
                         }}
                         transition={{ duration: 0.3 }}
                     >
@@ -146,7 +129,7 @@ const VisionMissionComponent: React.FC = () => {
                     />
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                     {sections.map((section, index) => (
                         <motion.div
                             key={section.id}
@@ -154,7 +137,7 @@ const VisionMissionComponent: React.FC = () => {
                             whileHover={{
                                 scale: 1.05,
                                 rotateY: 5,
-                                z: 50
+                                z: 50,
                             }}
                             transition={{ duration: 0.3 }}
                         >
@@ -162,11 +145,10 @@ const VisionMissionComponent: React.FC = () => {
                                 className="relative bg-white rounded-3xl p-4 lg:p-8 shadow-lg border border-stone-200 overflow-hidden"
                                 whileHover={{
                                     boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-                                    borderColor: "#fecaca"
+                                    borderColor: "#fecaca",
                                 }}
                                 transition={{ duration: 0.3 }}
                             >
-
                                 <motion.div
                                     className="absolute inset-0 bg-gradient-to-br from-red-50/50 to-transparent rounded-3xl"
                                     initial={{ opacity: 0 }}
@@ -187,26 +169,20 @@ const VisionMissionComponent: React.FC = () => {
                                     style={{ animationDelay: `${index * 0.5 + 0.2}s` }}
                                 />
 
-                                <div className="relative z-10" >
+                                <div className="relative z-10">
                                     <div className="flex justify-center mb-6">
                                         <motion.div
                                             className="p-3 bg-red-50 rounded-2xl"
-                                            variants={iconVariants}
                                             whileHover={{
                                                 scale: 1.2,
                                                 rotate: 10,
-                                                backgroundColor: "#fef2f2"
+                                                backgroundColor: "#fef2f2",
                                             }}
                                             whileTap={{ scale: 0.9 }}
                                         >
-                                            <motion.div
-                                                whileHover={{ rotate: 15 }}
-                                                transition={{ duration: 0.3 }}
-                                            >
-                                                <span className="h-10 w-10 flex items-center justify-center text-[#981314]">
-                                                    {section.icon}
-                                                </span>
-                                            </motion.div>
+                                            <span className="h-10 w-10 flex items-center justify-center text-[#981314]">
+                                                {section.icon}
+                                            </span>
                                         </motion.div>
                                     </div>
 
@@ -214,7 +190,7 @@ const VisionMissionComponent: React.FC = () => {
                                         className="text-2xl lg:text-3xl font-bold text-slate-800 text-center mb-6"
                                         whileHover={{
                                             color: "#981314",
-                                            scale: 1.05
+                                            scale: 1.05,
                                         }}
                                         transition={{ duration: 0.3 }}
                                     >
@@ -258,16 +234,16 @@ const VisionMissionComponent: React.FC = () => {
                         {[0, 1, 2].map((index) => (
                             <motion.div
                                 key={index}
-                                className={`w-3 h-3 rounded-full ${index === 0 ? 'bg-red-500' : index === 1 ? 'bg-red-400' : 'bg-red-300'
+                                className={`w-3 h-3 rounded-full ${index === 0 ? "bg-red-500" : index === 1 ? "bg-red-400" : "bg-red-300"
                                     }`}
                                 animate={{
                                     scale: [1, 1.2, 1],
-                                    opacity: [0.7, 1, 0.7]
+                                    opacity: [0.7, 1, 0.7],
                                 }}
                                 transition={{
                                     duration: 2,
                                     repeat: Infinity,
-                                    delay: index * 0.2
+                                    delay: index * 0.2,
                                 }}
                             />
                         ))}

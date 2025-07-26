@@ -6,6 +6,20 @@ import { Star, MapPin, Bed, Bath, Square, X, Mail, Phone } from "lucide-react";
 import PropertyGallery from "@/components/propertyGallery";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+const gridVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.10, delayChildren: 0.2 }
+  }
+};
+
+// const cardVariants = {
+//   hidden: { opacity: 0, y: 35, scale: 0.97 },
+//   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
+// };
 
 export default function PropertiesPage() {
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
@@ -32,38 +46,87 @@ export default function PropertiesPage() {
 
   return (
     <div className="bg-white min-h-screen">
-      <div className="relative w-full h-80 md:h-[740px] flex items-center justify-center mb-6">
-        <img
-          src="/image3.jpg"
-          alt="Properties Background"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50" />
-
+      {/* HERO SECTION */}
+      <div className="relative w-full h-96 md:h-[740px] flex items-center justify-center mb-6 overflow-hidden">
+        {/* Animated background */}
+        <motion.div
+          className="absolute inset-0"
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.1, ease: "easeOut" }}
+        >
+          <Image
+            width={1920}
+            height={800}
+            src="/image3.jpg"
+            alt="Properties Background"
+            className="w-full h-full object-cover"
+            priority
+          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="absolute inset-0 bg-black"
+          />
+        </motion.div>
         <div className="absolute top-0 left-0 w-full z-20">
           <Navbar />
         </div>
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 drop-shadow-lg">
+        {/* Animated headline and subtext */}
+        <motion.div
+          className="relative z-10 flex flex-col items-center justify-center text-center px-4"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.13, delayChildren: 0.4 } },
+          }}
+        >
+          <motion.h1
+            className="text-4xl md:text-5xl font-bold text-white mb-3 drop-shadow-lg"
+            initial={{ opacity: 0, y: 34 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.78, delay: 0.6 }}
+          >
             All Properties
-          </h1>
-          <p className="text-lg md:text-xl text-white max-w-2xl drop-shadow">
+          </motion.h1>
+          <motion.p
+            className="text-lg md:text-xl text-white max-w-2xl drop-shadow"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.68, delay: 0.9 }}
+          >
             Browse all available properties below.
-          </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#08194A] to-red-600 mx-auto rounded-full mt-4"></div>
-        </div>
+          </motion.p>
+          <motion.div
+            className="w-24 h-1 bg-gradient-to-r from-[#08194A] to-red-600 mx-auto rounded-full mt-4"
+            initial={{ width: 0, opacity: 0 }}
+            animate={{ width: 96, opacity: 1 }}
+            transition={{ duration: 0.7, delay: 1.05 }}
+          />
+        </motion.div>
       </div>
 
-      {/* Properties Grid */}
+      {/* Properties Grid with Animation */}
       <div className="max-w-7xl mx-auto px-4 my-10 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          variants={gridVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {propertiesToShow.map((property) => (
-            <div
+            <motion.div
               key={property.id}
+              // variants={cardVariants}
+              whileHover={{ y: -5, scale: 1.025, boxShadow: "0 8px 32px 0 rgba(15,23,42,0.09)" }}
               className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative">
-                <img
+                <Image
+                  width={700}
+                  height={400}
                   src={property.images[0]}
                   alt={property.title}
                   className="w-full h-48 object-cover"
@@ -111,9 +174,9 @@ export default function PropertiesPage() {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {showSeeMore && (
           <div className="flex justify-center mt-8 ">

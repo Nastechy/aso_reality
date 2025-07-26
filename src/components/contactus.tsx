@@ -92,13 +92,13 @@ const ContactSection: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-3xl shadow-2xl p-4 md:p-8 md:p-12 border border-gray-100 h-full flex flex-col">
+                    <div className="bg-white rounded-3xl shadow-2xl p-4 md:p-8  border border-gray-100 h-full flex flex-col">
                         <div className="mb-8">
                             <h3 className="text-[18px] font-bold text-gray-900 mb-2">
                                 FILL THE FORM BELOW
                             </h3>
                             <p className="text-gray-600 text-[14px]">
-                                We'll get back to you within 24 hours
+                                We&apos;ll get back to you within 24 hours
                             </p>
                         </div>
 

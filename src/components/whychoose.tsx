@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Shield, Lock, CreditCard, Users, TrendingUp, DollarSign } from 'lucide-react';
+import { motion, easeOut } from 'framer-motion';
+import { Shield, CreditCard, Users,  } from 'lucide-react';
 
 const WhyChooseAsoRealty = () => {
     const benefits = [
@@ -49,28 +49,28 @@ const WhyChooseAsoRealty = () => {
             scale: 1,
             transition: {
                 duration: 0.6,
-                ease: "easeOut"
+                ease: easeOut // <-- fixed
             }
         }
     };
 
-    const iconVariants = {
-        hidden: {
-            scale: 0,
-            rotate: -90
-        },
-        visible: {
-            scale: 1,
-            rotate: 0,
-            transition: {
-                duration: 0.6,
-                delay: 0.2,
-                ease: "backOut",
-                type: "spring",
-                bounce: 0.4
-            }
-        }
-    };
+    // const iconVariants = {
+    //     hidden: {
+    //         scale: 0,
+    //         rotate: -90
+    //     },
+    //     visible: {
+    //         scale: 1,
+    //         rotate: 0,
+    //         transition: {
+    //             duration: 0.6,
+    //             delay: 0.2,
+    //             ease: backOut, // <-- fixed
+    //             type: "spring",
+    //             bounce: 0.4
+    //         }
+    //     }
+    // };
 
     return (
         <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-2 md:px-4">
@@ -113,7 +113,7 @@ const WhyChooseAsoRealty = () => {
 
                                     <motion.div
                                         className="flex justify-center mb-6"
-                                        variants={iconVariants}
+                                    // variants={iconVariants}
                                     >
                                         <div className="p-4 bg-red-50 rounded-full">
                                             <span className="h-6 w-6 flex items-center justify-center text-[#08194A]">

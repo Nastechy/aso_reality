@@ -18,6 +18,42 @@ interface CountsState {
     experience: number;
 }
 
+// ---- MOVE THIS OUTSIDE THE COMPONENT ----
+const stats: Stat[] = [
+    {
+        id: 'houses',
+        target: 500,
+        label: 'Houses Sold',
+        color: 'text-amber-800',
+        bgColor: 'bg-amber-50',
+        borderColor: 'border-amber-200'
+    },
+    {
+        id: 'states',
+        target: 5,
+        label: 'Operating in 5 States',
+        color: 'text-emerald-500',
+        bgColor: 'bg-emerald-50',
+        borderColor: 'border-emerald-200'
+    },
+    {
+        id: 'trusted',
+        target: 1000,
+        label: 'Trusted by Families',
+        color: 'text-blue-500',
+        bgColor: 'bg-blue-50',
+        borderColor: 'border-blue-200'
+    },
+    {
+        id: 'experience',
+        target: 10,
+        label: 'Years of Experience',
+        color: 'text-white',
+        bgColor: 'bg-blue-950',
+        borderColor: 'border-blue-900'
+    }
+];
+
 const StatsComponent: React.FC = () => {
     const [counts, setCounts] = useState<CountsState>({
         houses: 0,
@@ -25,41 +61,6 @@ const StatsComponent: React.FC = () => {
         trusted: 0,
         experience: 0
     });
-
-    const stats: Stat[] = [
-        {
-            id: 'houses',
-            target: 500,
-            label: 'Houses Sold',
-            color: 'text-amber-800',
-            bgColor: 'bg-amber-50',
-            borderColor: 'border-amber-200'
-        },
-        {
-            id: 'states',
-            target: 5,
-            label: 'Operating in 5 States',
-            color: 'text-emerald-500',
-            bgColor: 'bg-emerald-50',
-            borderColor: 'border-emerald-200'
-        },
-        {
-            id: 'trusted',
-            target: 1000,
-            label: 'Trusted by Families',
-            color: 'text-blue-500',
-            bgColor: 'bg-blue-50',
-            borderColor: 'border-blue-200'
-        },
-        {
-            id: 'experience',
-            target: 10,
-            label: 'Years of Experience',
-            color: 'text-white',
-            bgColor: 'bg-blue-950',
-            borderColor: 'border-blue-900'
-        }
-    ];
 
     useEffect(() => {
         const duration = 2000; // 2 seconds
@@ -85,23 +86,14 @@ const StatsComponent: React.FC = () => {
         return () => {
             Object.values(intervals).forEach(clearInterval);
         };
-    }, []);
+    }, []); // <-- empty array is fine because stats is now outside
 
     const getCounterValue = (statId: string): number => {
         return counts[statId as keyof CountsState];
     };
 
     const getDisplayValue = (statId: string, value: number): string => {
-        if (statId === 'houses' || statId === 'trusted') {
-            return `${value}+`;
-        }
-        if (statId === 'states') {
-            return `${value}+`;
-        }
-        if (statId === 'experience') {
-            return `${value}+`;
-        }
-        return `${value}`;
+        return `${value}+`;
     };
 
     return (

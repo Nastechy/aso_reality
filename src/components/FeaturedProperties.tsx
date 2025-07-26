@@ -3,8 +3,10 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Star, MapPin, Bed, Bath, Square, X, Mail, Phone } from "lucide-react";
-import { Property, properties } from "@/lib/data"; 
+import { Property, properties } from "@/lib/data";
 import PropertyGallery from "./propertyGallery";
+import Image from "next/image";
+
 
 export default function FeaturedPropertiesSection() {
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
@@ -28,7 +30,9 @@ export default function FeaturedPropertiesSection() {
               className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative">
-                <img
+                <Image
+                  width={0}
+                  height={0}
                   src={property.images[0]}
                   alt={property.title}
                   className="w-full h-48 object-cover"

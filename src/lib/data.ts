@@ -197,3 +197,57 @@ export const properties: Property[] = [
     description: "Modern skyline loft with breathtaking city views and floor-to-ceiling windows."
   }
 ];
+
+
+
+// lib/data.ts
+export const testimonials = [
+  {
+    id: 1,
+    name: "Maryam Adeyemi",
+    role: "First-time Home Buyer",
+    photo: "/avatar-1.jpg",
+    text: "Aso Realty made buying my first home a breeze! The team supported me every step of the way, answered all my questions, and got me a great deal.",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "John Okoli",
+    role: "Property Investor",
+    photo: "/avatar-2.jpg",
+    text: "I've worked with other agencies, but Aso Realty stands out for their transparency and professionalism. I felt secure at every stage of the process.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Grace Okechukwu",
+    role: "Land Purchaser",
+    photo: "/avatar-3.jpg",
+    text: "From flexible payment plans to smooth documentation, everything was handled perfectly. I recommend Aso Realty to anyone looking for peace of mind.",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Mustapha Garba",
+    role: "Land Owner",
+    photo: "/avatar-4.jpg",
+    text: "The team delivered on every promise. Secure, reliable, and professional throughout.",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "Ngozi Emeka",
+    role: "Property Seller",
+    photo: "/avatar-5.jpg",
+    text: "Their marketing and negotiation skills helped me sell my property quickly for a great price!",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "Samuel Adeniran",
+    role: "Repeat Customer",
+    photo: "/avatar-6.jpg",
+    text: "I’ve bought and sold with Aso Realty multiple times. Each experience has been excellent and stress-free.",
+    rating: 5,
+  },
+];

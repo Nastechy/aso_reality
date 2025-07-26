@@ -1,8 +1,7 @@
-
 "use client"
 
 import { useEffect, useRef } from "react"
-import { motion, useInView, useAnimation } from "framer-motion"
+import { motion, useInView, useAnimation, easeOut, easeInOut } from "framer-motion"
 import Image from "next/image"
 
 export default function About() {
@@ -21,7 +20,7 @@ export default function About() {
         visible: {
             opacity: 1,
             y: [40, -10, 0],
-            transition: { duration: 1, ease: "easeInOut" },
+            transition: { duration: 1, ease: easeInOut },
         },
     }
 
@@ -30,7 +29,7 @@ export default function About() {
         visible: {
             opacity: 1,
             scale: 1,
-            transition: { delay: 0.2, duration: 0.6, ease: "easeOut" },
+            transition: { delay: 0.2, duration: 0.6, ease: easeOut },
         },
     }
 
@@ -40,7 +39,7 @@ export default function About() {
             opacity: 1,
             scale: 1,
             rotate: 0,
-            transition: { duration: 1.2, ease: "easeOut" },
+            transition: { duration: 1.2, ease: easeOut },
         },
     }
 
@@ -67,14 +66,14 @@ export default function About() {
                         >
                             <motion.div
                                 className="text-[26px] font-bold text-[#394636]"
-                            // variants={titleVariants}
+                                variants={titleVariants}
                             >
                                 About Us
                             </motion.div>
 
                             <motion.p
                                 className="text-gray-600  leading-relaxed"
-                            // variants={textVariants}
+                                variants={textVariants}
                             >
                                 <span className="font-[12px] flex flex-col gap-4">
                                     <span>
@@ -101,7 +100,6 @@ export default function About() {
                                     </span>
 
                                 </span>
-
                             </motion.p>
                         </motion.div>
 
@@ -109,7 +107,7 @@ export default function About() {
                             className="relative"
                             initial="hidden"
                             animate={controls}
-                            // variants={imageVariants}
+                            variants={imageVariants}
                             whileHover={{ scale: 1.03 }}
                             transition={{ type: "spring", stiffness: 150 }}
                         >
@@ -131,4 +129,3 @@ export default function About() {
         </div>
     )
 }
-

@@ -1,10 +1,9 @@
+"use client";
 
-"use client"
-
-import { useState, useEffect, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Navbar } from "./navbar"
-import { MapPin } from "lucide-react"
+import { useState, useEffect, useRef, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Navbar } from "./navbar";
+import { MapPin } from "lucide-react";
 
 const heroSlides = [
     {
@@ -22,53 +21,56 @@ const heroSlides = [
         image: "/image2.jpg",
         title: "Invest wisely with Aso Realty Limited",
     },
-]
+];
 
 export default function HeroSlider() {
-    const [currentSlide, setCurrentSlide] = useState(0)
-    const [isAnimating, setIsAnimating] = useState(false)
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(false);
+    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+    // 1. useCallback to define goToSlide
+    const goToSlide = useCallback(
+        (index: number) => {
+            if (isAnimating || index === currentSlide) return;
+            setIsAnimating(true);
+            setCurrentSlide(index);
+
+            // Allow animation to finish before enabling buttons
+            setTimeout(() => setIsAnimating(false), 1500); // match motion transition duration
+        },
+        [isAnimating, currentSlide]
+    );
+
+    // 2. Lint fix: Add goToSlide to deps
     useEffect(() => {
-        if (isAnimating) return
+        if (isAnimating) return;
 
         timeoutRef.current = setTimeout(() => {
-            goToSlide((currentSlide + 1) % heroSlides.length)
-        }, 8000)
+            goToSlide((currentSlide + 1) % heroSlides.length);
+        }, 8000);
 
         return () => {
             if (timeoutRef.current) {
-                clearTimeout(timeoutRef.current)
+                clearTimeout(timeoutRef.current);
             }
-        }
-    }, [currentSlide, isAnimating])
-
-    const goToSlide = (index: number) => {
-        if (isAnimating || index === currentSlide) return
-
-        setIsAnimating(true)
-        setCurrentSlide(index)
-
-        // Allow animation to finish before enabling buttons
-        setTimeout(() => setIsAnimating(false), 1500) // match motion transition duration
-    }
+        };
+    }, [currentSlide, isAnimating, goToSlide]);
 
     // Optional: keyboard navigation support
     const handleKeyDown = (e: React.KeyboardEvent) => {
-        if (isAnimating) return
+        if (isAnimating) return;
 
         if (e.key === "ArrowRight") {
-            goToSlide((currentSlide + 1) % heroSlides.length)
+            goToSlide((currentSlide + 1) % heroSlides.length);
         } else if (e.key === "ArrowLeft") {
-            goToSlide((currentSlide - 1 + heroSlides.length) % heroSlides.length)
+            goToSlide((currentSlide - 1 + heroSlides.length) % heroSlides.length);
         }
-    }
+    };
 
     const mapsUrl =
-    "https://www.google.com/maps/search/?api=1&query=Abuja+Nigeria"; 
+        "https://www.google.com/maps/search/?api=1&query=Abuja+Nigeria";
 
     return (
-
         <section
             tabIndex={0}
             onKeyDown={handleKeyDown}
@@ -94,7 +96,7 @@ export default function HeroSlider() {
                 </motion.div>
             </AnimatePresence>
 
-            <div className="relative z-10 flex md:mt-40 mt-20 items-center" >
+            <div className="relative z-10 flex md:mt-40 mt-20 items-center">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-2xl flex flex-col gap-5">
                         <a
@@ -114,7 +116,7 @@ export default function HeroSlider() {
                                     <MapPin size={16} />
                                 </span>
                                 <span className="text-[11px] font-semibold uppercase tracking-wider">
-                                    ASO REALITY
+                                    ASO REALTY
                                 </span>
                             </motion.div>
                         </a>
@@ -135,7 +137,9 @@ export default function HeroSlider() {
                             transition={{ delay: 0.9, duration: 0.6 }}
                             className="flex flex-col gap-4 sm:flex-row"
                         >
-                           <div className="font-medium text-white">Wealth, Unity, Home – Your journey begins here.</div>
+                            <div className="font-medium text-white">
+                                Wealth, Unity, Home – Your journey begins here.
+                            </div>
                         </motion.div>
                     </div>
                 </div>
@@ -147,7 +151,9 @@ export default function HeroSlider() {
                 transition={{ delay: 1.1, duration: 0.6 }}
                 className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 items-center space-x-2 text-white"
             >
-                <span className="text-2xl font-bold">{String(currentSlide + 1).padStart(2, "0")}</span>
+                <span className="text-2xl font-bold">
+                    {String(currentSlide + 1).padStart(2, "0")}
+                </span>
                 <div className="flex items-center space-x-2">
                     {heroSlides.map((_, index) => (
                         <button
@@ -161,7 +167,9 @@ export default function HeroSlider() {
                         />
                     ))}
                 </div>
-                <span className="text-2xl font-light">{String(heroSlides.length).padStart(2, "0")}</span>
+                <span className="text-2xl font-light">
+                    {String(heroSlides.length).padStart(2, "0")}
+                </span>
             </motion.div>
 
             <div className="absolute bottom-20 left-1/2 z-20 flex -translate-x-1/2 space-x-3">
@@ -178,8 +186,5 @@ export default function HeroSlider() {
                 ))}
             </div>
         </section>
-
-
-    )
+    );
 }
-
