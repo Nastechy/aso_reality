@@ -10,7 +10,7 @@ const teamMembers = [
         id: 1,
         name: "Hadeed Ullah",
         position: "General Manager",
-        image: "GM.jpeg",
+        image: "/GM.jpeg",
         phone: "+234 801 234 5678",
         email: "hadeed.ullah@asorealty.com",
         social: {
@@ -24,7 +24,7 @@ const teamMembers = [
         id: 2,
         name: "Abraham Nwankwo",
         position: "Managing Director",
-        image: "EM.jpeg",
+        image: "/EM.jpeg",
         phone: "+234 802 345 6789",
         email: "adebayo.johnson@asorealty.com",
         social: {
@@ -164,8 +164,8 @@ const OurTeamSection = () => (
                                 transition={{ duration: 0.35, ease: "easeOut" }}
                             >
                                 <Image
-                                height={0}
-                                width={0}
+                                    height={200}
+                                    width={200}
                                     src={member.image}
                                     alt={member.name}
                                     className="w-full h-full object-cover transition-all duration-300 group-hover:object-contain"

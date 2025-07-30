@@ -62,19 +62,19 @@ const ContactSection: React.FC = () => {
                                     <span className="bg-white/20 rounded-lg p-2 flex items-center">
                                         <Phone className="w-5 h-5 text-white" />
                                     </span>
-                                    <span className="text-white text-base">+234 xxx xxx xxxx</span>
+                                    <span className="text-white text-base">08037616518, 08034109687</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <span className="bg-white/20 rounded-lg p-2 flex items-center">
                                         <Mail className="w-5 h-5 text-white" />
                                     </span>
-                                    <span className="text-white text-base">info@asorealty.com</span>
+                                    <span className="text-white text-base">asorealtylimted@gmail.com</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <span className="bg-white/20 rounded-lg p-2 flex items-center">
                                         <MapPin className="w-5 h-5 text-white" />
                                     </span>
-                                    <span className="text-white text-base">Plot XX, Gwarinpa, Abuja</span>
+                                    <span className="text-white text-base">C1, Amaka Mall, 9 San Zangon Daura Street, Guzape-Abuja</span>
                                 </div>
                             </div>
                         </div>
