@@ -158,8 +158,8 @@ const WhyChooseAsoRealty = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1.2 }}
                 >
-                    <button className="bg-[#981314] text-[13px] cursor-pointer text-white px-8 py-3 rounded-[3px] font-bold hover:bg-[#08194A] transition-colors duration-300 shadow-lg">
-                        Get Started Today
+                    <button className="bg-[#08194A] text-[13px] cursor-pointer text-white px-8 py-3 rounded-[3px] font-bold hover:bg-[#981314] transition-colors duration-300 shadow-lg">
+                        Get Started Today 
                     </button>
                 </motion.div>
             </div>

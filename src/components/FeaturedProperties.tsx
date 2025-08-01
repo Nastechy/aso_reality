@@ -89,7 +89,7 @@ export default function FeaturedPropertiesSection() {
 
         <div className="text-center mt-10 md:mt-16">
           <button
-            className="bg-[#981314] text-[13px] cursor-pointer text-white px-8 py-3 rounded-lg font-bold hover:bg-[#08194A] transition-colors duration-200"
+            className="bg-[#981314] text-[13px] cursor-pointer text-white px-8 py-3 rounded-[5px] font-bold hover:bg-[#08194A] transition-colors duration-200"
             onClick={() => router.push("/properties")} 
           >
             View All Properties
