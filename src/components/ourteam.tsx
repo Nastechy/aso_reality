@@ -157,7 +157,6 @@ const OurTeamSection = () => (
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-[#981314]/30 blur-2xl z-0" />
 
                             <motion.div
-                                style={{ border: '4px solid red' }}
                                 className="w-36 h-36 rounded-full border-4 border-white shadow-xl bg-gray-100 overflow-hidden z-10 relative flex items-center justify-center"
                                 whileHover={{ scale: 1.05, boxShadow: "0 8px 32px 0 rgba(152,19,20,0.16)" }}
                                 transition={{ duration: 0.35, ease: "easeOut" }}

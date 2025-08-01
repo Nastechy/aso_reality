@@ -42,7 +42,7 @@ export default function TestimonialSection() {
     const totalPages = num;
 
     return (
-        <section className="bg-white py-16 md:py-24 px-2 md:px-0">
+        <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-16 md:py-24 px-2 md:px-0">
             <div
                 className="max-w-6xl mx-auto rounded-2xl"
             >
