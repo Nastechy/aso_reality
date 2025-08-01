@@ -220,7 +220,7 @@ const OurTeamSection = () => (
                         {/* Content */}
                         <div className="p-4 flex-1 flex flex-col justify-between">
                             <div className="text-center mb-4">
-                                <h3 className="text-xl font-bold text-gray-900 mb-1 tracking-wide">
+                                <h3 className="text-[16px] font-bold text-gray-900 mb-1 tracking-wide">
                                     {member.name.toUpperCase()}
                                 </h3>
                                 <p className="text-[#981314] font-semibold text-sm">{member.position}</p>

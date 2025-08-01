@@ -126,7 +126,6 @@ export default function FeaturedPropertiesSection() {
                   <span className="ml-1 text-lg font-medium text-gray-900">{selectedProperty.rating}</span>
                   <span className="text-sm text-gray-500 ml-2">({selectedProperty.reviews} Reviews)</span>
                 </div>
-                <div className="text-[#981314] text-xl font-bold mb-3">{selectedProperty.price}</div>
                 <div className="text-gray-700 mb-4 text-[15px] leading-relaxed" style={{ whiteSpace: "pre-line" }}>
                   {selectedProperty.description || "No extra description available for this property."}
                 </div>
