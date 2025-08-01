@@ -48,7 +48,7 @@ export default function OurTeamPage() {
             visible: { transition: { staggerChildren: 0.13, delayChildren: 0.4 } },
           }}
         >
-          <motion.h1
+          {/* <motion.h1
             className="text-4xl md:text-5xl font-bold text-white mb-3 drop-shadow-lg"
             initial={{ opacity: 0, y: 34 }}
             animate={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export default function OurTeamPage() {
             transition={{ duration: 0.68, delay: 0.9 }}
           >
             Meet the passionate people driving our mission and innovation every day.
-          </motion.p>
+          </motion.p> */}
           <motion.div
             className="w-24 h-1 bg-gradient-to-r from-[#08194A] to-red-600 mx-auto rounded-full mt-4"
             initial={{ width: 0, opacity: 0 }}

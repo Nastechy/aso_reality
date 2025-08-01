@@ -41,7 +41,7 @@ const ContactSection: React.FC = () => {
     };
 
     return (
-        <section className="w-full min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-10 md:py-20 px-4">
+        <section className="w-full min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-10 md:py-20 px-2 md:px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-8 md:mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2 tracking-tight">
@@ -54,7 +54,7 @@ const ContactSection: React.FC = () => {
 
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
                     <div className="flex flex-col h-full">
-                        <div className="bg-[#902923] rounded-3xl flex flex-col justify-center p-8 min-h-[350px] shadow-md">
+                        <div className="bg-[#902923] rounded-3xl flex flex-col justify-center p-6 md:p-8 min-h-[300px] md:min-h-[350px] shadow-md">
                             <div className="mb-4 text-xs tracking-widest text-white opacity-80">LETS TALK</div>
                             <div className="text-2xl font-semibold text-white mb-8">Speak With Our Expert</div>
                             <div className="flex flex-col gap-5">
@@ -78,8 +78,8 @@ const ContactSection: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="text-center mt-10 md:mt-20">
-                            <div className="inline-flex items-center space-x-2 bg-gray-100 px-6 py-3 rounded-full">
+                        <div className="text-center mt-10 md:mt-20 hidden md:block " >
+                            <div className="inline-flex items-center space-x-2 bg-gray-100 px-6 py-3 rounded-full ">
                                 <div className="flex -space-x-2">
                                     <div className="w-8 h-8 bg-red-500 rounded-full border-2 border-white"></div>
                                     <div className="w-8 h-8 bg-blue-500 rounded-full border-2 border-white"></div>
@@ -92,7 +92,7 @@ const ContactSection: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-3xl shadow-2xl p-4 md:p-8  border border-gray-100 h-full flex flex-col">
+                    <div className="bg-white rounded-3xl shadow-2xl px-3 md:px-8 py-6 md:py-8  border border-gray-100 h-full flex flex-col">
                         <div className="mb-8">
                             <h3 className="text-[18px] font-bold text-gray-900 mb-2">
                                 FILL THE FORM BELOW

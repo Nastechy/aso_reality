@@ -77,27 +77,29 @@ export default function About() {
                             >
                                 <span className="font-[12px] flex flex-col gap-4">
                                     <span>
-                                        Aso Real Estate Limited (RC: 6900425)
-                                        is passionate about helping to empower families by providing
-                                        them safe and prosperous communities to live or do businesses in.
-                                        Our employees are characterized by excellence, respect, integrity,
-                                        and the ability to consistently deliver superior professional
-                                        service laced with innovation.
+                                        At <span className="font-bold text-b">ASO REALTY LIMITED</span>, we believe in building more
+                                        than just structures; we cultivate lasting prosperity.
+                                        Our commitment lies in expertly connecting people with
+                                        their ideal spaces, fostering growth from the very
+                                        foundation. We serve as a dependable guide for
+                                        investors, both local and international, turning
+                                        aspirations into concrete achievements.
                                     </span>
                                     <span>
-                                        Every step of the way in our conversations, we keep the satisfaction of our clientele in the
-                                        vanguard. We provide every necessary support to our clients,
-                                        Aso Real Estate Limited (RC: 6900425)
-                                        is passionate about helping to empower families by providing
-                                        them safe and prosperous communities to live or do businesses in.
+                                        Pioneers in developing remarkable estates,
+                                        we help establish enduring wealth across generations.
+                                        Our dedication is to creating legacies, ensuring every
+                                        individual discovers their ultimate dwelling in Nigeria,
+                                        no matter where they are. We operate with genuine integrity,
+                                        responsible oversight, and a keen eye for potential.
                                     </span>
-                                    <span>
+                                    {/* <span>
                                         Our employees are characterized by excellence, respect, integrity,
                                         and the ability to consistently deliver superior professional
                                         service laced with innovation. Every step of the way in our
                                         conversations, we keep the satisfaction of our clientele in the
                                         vanguard. We provide every necessary support to our clients,
-                                    </span>
+                                    </span> */}
 
                                 </span>
                             </motion.p>

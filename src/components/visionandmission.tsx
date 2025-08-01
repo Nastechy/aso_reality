@@ -22,7 +22,7 @@ const VisionMissionComponent: React.FC = () => {
             id: "mission",
             title: "Our Mission",
             content:
-                "We empower families by connecting them with exceptional and innovative real estate solutions, creating opportunities that transform lives, build communities, and establish lasting relationships for everyone we serve.",
+                "To be the trusted cornerstone for investors both at home and abroad, transforming dreams into tangible realities. We pioneer estates that secure generational wealth for our clients. We are committed to crafting not just properties, but legacies, ensuring everyone finds a place they can proudly call home in Nigeria, regardless of their current location.",
             icon: (
                 <svg className="w-12 h-12 text-[#981314]" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L2 7v10c0 5.55 3.84 10 9 11 1.09-.87 2.02-1.99 2.5-3.5.3-.94.5-1.94.5-3 0-5.52-4.48-10-10-10z" />
@@ -34,10 +34,20 @@ const VisionMissionComponent: React.FC = () => {
             id: "vision",
             title: "Our Vision",
             content:
-                "We envision a future where every family has access to a thriving, secure community that nurtures growth, embraces diversity, and champions social sustainability. Our goal is to create lasting partnerships that transform lives while building exceptional communities.",
+                "To responsibly steward the earth's potential and expertly match individuals with their perfect property, from the ground up.",
             icon: (
                 <svg className="w-12 h-12 text-[#981314]" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg>
+            ),
+        },
+        {
+            id: "core-values",
+            title: "Core Values",
+            content: "Authenticity • Stewardship • Opportunity",
+            icon: (
+                <svg className="w-12 h-12 text-[#981314]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
             ),
         },
@@ -137,7 +147,7 @@ const VisionMissionComponent: React.FC = () => {
                     />
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
                     {sections.map((section, index) => (
                         <motion.div
                             key={section.id}

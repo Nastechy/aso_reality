@@ -8,37 +8,37 @@ import Image from 'next/image';
 const teamMembers = [
     {
         id: 1,
-        name: "Hadeed Ullah",
-        position: "General Manager",
-        image: "/GM.jpeg",
-        phone: "+234 801 234 5678",
-        email: "hadeed.ullah@asorealty.com",
+        name: "Abraham O. Azi",
+        position: "Managing Director",
+        image: "/NewGM.jpg",
+        phone: "+234 803 761 6518",
+        email: "adebayo.johnson@asorealty.com",
         social: {
-            linkedin: "hadeed-ullah-design",
-            twitter: "hadeedullah_",
-            instagram: "hadeed.designs",
-            facebook: "hadeed.ullah.creative"
+            linkedin: "Azi Abraham ",
+            twitter: "Azi Abraham ",
+            instagram: "Azi Abraham ",
+            facebook: "Azi Abraham "
         }
     },
     {
         id: 2,
-        name: "Abraham Nwankwo",
-        position: "Managing Director",
-        image: "/EM.jpeg",
-        phone: "+234 802 345 6789",
-        email: "adebayo.johnson@asorealty.com",
+        name: "Chukwuemeka Udeh Elijah",
+        position: "General Manager",
+        image: "/NewMD.jpg",
+        phone: "+234 803 410 9687",
+        email: "emekaelijah545@gmail.com",
         social: {
-            linkedin: "adebayo-johnson-realestate",
-            twitter: "adebayoj_homes",
-            instagram: "adebayo.properties",
-            facebook: "adebayo.johnson.agent"
+            linkedin: "emmyeli_jah",
+            twitter: "emmyeli_jah",
+            instagram: "emmyeli_jah",
+            facebook: "emmyeli_jah"
         }
     },
     {
         id: 3,
         name: "Fatima Abdullahi",
         position: "Property Manager",
-        image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&h=300&fit=crop&crop=face",
+        image: "/Invisible.png",
         phone: "+234 803 456 7890",
         email: "fatima.abdullahi@asorealty.com",
         social: {
@@ -52,7 +52,7 @@ const teamMembers = [
         id: 4,
         name: "Chidi Okafor",
         position: "Investment Consultant",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
+        image: "/Invisible.png",
         phone: "+234 804 567 8901",
         email: "chidi.okafor@asorealty.com",
         social: {
@@ -66,7 +66,7 @@ const teamMembers = [
         id: 5,
         name: "Amina Hassan",
         position: "Marketing Director",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+        image: "/Invisible.png",
         phone: "+234 805 678 9012",
         email: "amina.hassan@asorealty.com",
         social: {
@@ -80,7 +80,7 @@ const teamMembers = [
         id: 6,
         name: "Tunde Adebayo",
         position: "Legal Advisor",
-        image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=300&h=300&fit=crop&crop=face",
+        image: "/Invisible.png",
         phone: "+234 806 789 0123",
         email: "tunde.adebayo@asorealty.com",
         social: {
@@ -153,12 +153,11 @@ const OurTeamSection = () => (
                         }}
                         className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
                     >
-                        {/* IMAGE BOX */}
-                        <div className="relative group flex justify-center mt-4 mb-4">
-                            {/* Blurred colored glow */}
+                        <div className="relative group flex justify-center mt-4 mb-4" >
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-[#981314]/30 blur-2xl z-0" />
 
                             <motion.div
+                                style={{ border: '4px solid red' }}
                                 className="w-36 h-36 rounded-full border-4 border-white shadow-xl bg-gray-100 overflow-hidden z-10 relative flex items-center justify-center"
                                 whileHover={{ scale: 1.05, boxShadow: "0 8px 32px 0 rgba(152,19,20,0.16)" }}
                                 transition={{ duration: 0.35, ease: "easeOut" }}
@@ -168,13 +167,12 @@ const OurTeamSection = () => (
                                     width={200}
                                     src={member.image}
                                     alt={member.name}
-                                    className="w-full h-full object-cover transition-all duration-300 group-hover:object-contain"
+                                    className="w-full h-full object-cintain transition-all duration-300 group-hover:object-contain"
                                     style={{ aspectRatio: "1 / 1" }}
                                     draggable={false}
                                 />
                             </motion.div>
 
-                            {/* Social icons appear on hover */}
                             <motion.div
                                 className="absolute inset-0 flex items-end justify-center pb-2 gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"
                                 whileHover={{ opacity: 1 }}

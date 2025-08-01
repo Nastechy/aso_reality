@@ -45,7 +45,6 @@ export default function TestimonialSection() {
         <section className="bg-white py-16 md:py-24 px-2 md:px-0">
             <div
                 className="max-w-6xl mx-auto rounded-2xl"
-            // style={{ border: "3px solid red" }}
             >
                 <motion.div
                     className="text-center mb-20"
