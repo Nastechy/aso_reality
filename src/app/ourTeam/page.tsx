@@ -3,15 +3,14 @@ import React from "react";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import OurTeamSection from "@/components/ourteam";
-import WhyChooseAsoRealty from "@/components/whychoose";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import TestimonialSection from "@/components/testimonial";
 
 export default function OurTeamPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="relative w-full h-96 md:h-[740px] flex items-center justify-center overflow-hidden">
-        {/* Animated background */}
         <motion.div
           className="absolute inset-0"
           initial={{ opacity: 0, scale: 1.08 }}
@@ -75,8 +74,8 @@ export default function OurTeamPage() {
 
       <div className="mx-2 my-5 md:m-10">
         <OurTeamSection />
-        <WhyChooseAsoRealty />
-      </div>
+        <TestimonialSection />   
+           </div>
       <Footer />
     </div>
   );

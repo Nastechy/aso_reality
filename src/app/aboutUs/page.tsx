@@ -79,6 +79,7 @@ export default function AboutPage() {
       <div className="mx-2 my-5 md:m-10 ">
         <About />
         <VisionMissionComponent />
+        
       </div>
       <Footer />
     </div>

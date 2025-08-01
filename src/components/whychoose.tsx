@@ -55,7 +55,7 @@ const WhyChooseAsoRealty = () => {
     };
 
     return (
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-2 md:px-4">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-14 md:py-20 px-2 md:px-4">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     className="text-center mb-16"
@@ -71,7 +71,7 @@ const WhyChooseAsoRealty = () => {
                     }}
                 >
                     <motion.h2
-                        className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+                        className="text-3xl md:text-5xl font-bold text-gray-900 mb-4"
                         initial={{ opacity: 0, y: -30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
@@ -79,7 +79,7 @@ const WhyChooseAsoRealty = () => {
                         Why Choose Aso Realty?
                     </motion.h2>
                     <motion.p
-                        className="text-base md:text-lg text-gray-600 mb-2 max-w-2xl mx-auto"
+                        className="text-[14px] md:text-[16px] text-gray-600 mb-2 max-w-2xl mx-auto"
                         initial={{ opacity: 0, y: 28 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.15, ease: [0.23, 1, 0.32, 1] }}
@@ -113,9 +113,9 @@ const WhyChooseAsoRealty = () => {
                             className="relative"
                         >
                             <div
-                                className="bg-white rounded-2xl p-8 shadow-lg text-center relative overflow-hidden"
+                                className="bg-white rounded-2xl p-4 md:p-8 shadow-lg text-center relative overflow-hidden"
                                 style={{
-                                    boxShadow: "0 8px 32px 0 #08194A33" // custom shadow color
+                                    boxShadow: "0 8px 32px 0 #08194A33" 
                                 }}
                             >
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-full blur-3xl opacity-30 transform translate-x-16 -translate-y-16"></div>
@@ -131,7 +131,7 @@ const WhyChooseAsoRealty = () => {
                                     </div>
 
                                     <motion.h3
-                                        className="text-xl font-bold text-gray-900 mb-4"
+                                        className="text-[16px] md:text-[18px] font-bold text-gray-900 mb-4"
                                         whileHover={{ color: "#dc2626" }}
                                         transition={{ duration: 0.3 }}
                                     >
@@ -139,7 +139,7 @@ const WhyChooseAsoRealty = () => {
                                     </motion.h3>
 
                                     <motion.p
-                                        className="text-gray-600 leading-relaxed"
+                                        className="text-gray-600 leading-relaxed text-[14px] md:text-[16px]"
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         transition={{ duration: 0.6, delay: 0.4 }}

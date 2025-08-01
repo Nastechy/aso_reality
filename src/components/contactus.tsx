@@ -41,10 +41,10 @@ const ContactSection: React.FC = () => {
     };
 
     return (
-        <section className="w-full min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-10 md:py-20 px-2 md:px-4">
+        <section className="w-full min-h-screen bg-white py-10 md:py-20 px-2 md:px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-8 md:mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2 tracking-tight">
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2 tracking-tight">
                         CONTACT US
                     </h2>
                     <p className="text-[14px] md:text-[16px] text-gray-600 max-w-2xl mx-auto">
@@ -54,27 +54,27 @@ const ContactSection: React.FC = () => {
 
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
                     <div className="flex flex-col h-full">
-                        <div className="bg-[#902923] rounded-3xl flex flex-col justify-center p-6 md:p-8 min-h-[300px] md:min-h-[350px] shadow-md">
-                            <div className="mb-4 text-xs tracking-widest text-white opacity-80">LETS TALK</div>
-                            <div className="text-2xl font-semibold text-white mb-8">Speak With Our Expert</div>
-                            <div className="flex flex-col gap-5">
+                        <div className="bg-[#902923] rounded-3xl flex flex-col justify-center p-4 md:p-8 min-h-[300px] md:min-h-[350px] shadow-md">
+                            <div className="mb-4 text-[10px] md:text-xs tracking-widest text-white opacity-80">LETS TALK</div>
+                            <div className="md:text-2xl text-[18px] font-semibold text-white mb-8">Speak With Our Expert</div>
+                            <div className="flex flex-col gap-5 ">
                                 <div className="flex items-center gap-3">
                                     <span className="bg-white/20 rounded-lg p-2 flex items-center">
-                                        <Phone className="w-5 h-5 text-white" />
+                                        <Phone className="md:w-5 md:h-5 h-3 w-3 text-white" />
                                     </span>
-                                    <span className="text-white text-base">08037616518, 08034109687</span>
+                                    <span className="text-white text-[14px] md:text-base">08037616518, 08034109687</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <span className="bg-white/20 rounded-lg p-2 flex items-center">
-                                        <Mail className="w-5 h-5 text-white" />
+                                        <Mail className="md:w-5 md:h-5 h-3 w-3 text-white" />
                                     </span>
-                                    <span className="text-white text-base">asorealtylimted@gmail.com</span>
+                                    <span className="text-white text-[14px] md:text-base">asorealtylimted@gmail.com</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <span className="bg-white/20 rounded-lg p-2 flex items-center">
-                                        <MapPin className="w-5 h-5 text-white" />
+                                        <MapPin className="md:w-5 md:h-5 h-3 w-3 text-white" />
                                     </span>
-                                    <span className="text-white text-base">C1, Amaka Mall, 9 San Zangon Daura Street, Guzape-Abuja</span>
+                                    <span className="text-white text-[14px] md:text-base">C1, Amaka Mall, 9 San Zangon Daura Street, Guzape-Abuja</span>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +161,7 @@ const ContactSection: React.FC = () => {
                             >
                                 {isSubmitting ? (
                                     <>
-                                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                        <div className="md:w-5 md:h-5 h-3 w-3 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                                         <span>Sending...</span>
                                     </>
                                 ) : (

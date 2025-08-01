@@ -112,7 +112,7 @@ const VisionMissionComponent: React.FC = () => {
     };
 
     return (
-        <div className="bg-[#08194A] py-10 md:py-20 px-2 md:px-4">
+        <div className="bg-[#08194A] py-14 md:py-20 px-2 md:px-4">
             <motion.div
                 ref={ref}
                 className="max-w-6xl mx-auto"
@@ -120,9 +120,9 @@ const VisionMissionComponent: React.FC = () => {
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
             >
-                <motion.div className="text-center mb-16" variants={headerVariants}>
+                <motion.div className="text-center mb-10 md:mb-16" variants={headerVariants}>
                     <motion.h2
-                        className="text-4xl md:text-5xl font-bold text-white mb-4"
+                        className="text-3xl md:text-5xl font-bold text-white mb-4"
                         whileHover={{
                             scale: 1.05,
                             color: "#dc2626",
@@ -132,7 +132,7 @@ const VisionMissionComponent: React.FC = () => {
                         Vision & Mission
                     </motion.h2>
                     <motion.p
-                        className="text-base md:text-lg text-gray-100 mb-3 max-w-2xl mx-auto"
+                        className="text-[14px] md:text-[16px] text-gray-100 mb-3 max-w-2xl mx-auto"
                         initial={{ opacity: 0, y: 10 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
@@ -198,7 +198,7 @@ const VisionMissionComponent: React.FC = () => {
                                             }}
                                             whileTap={{ scale: 0.9 }}
                                         >
-                                            <span className="h-10 w-10 flex items-center justify-center text-[#981314]">
+                                            <span className="h-5 md:h-10 w-5 md:w-10 flex items-center justify-center text-[#981314]">
                                                 {section.icon}
                                             </span>
                                         </motion.div>

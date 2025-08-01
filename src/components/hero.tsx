@@ -137,7 +137,7 @@ export default function HeroSlider() {
                             transition={{ delay: 0.9, duration: 0.6 }}
                             className="flex flex-col gap-4 sm:flex-row"
                         >
-                            <div className="font-medium text-white">
+                            <div className="font-medium text-white text-[12px] md:text-[14px]">
                                 Wealth, Unity, Home – Your journey begins here.
                             </div>
                         </motion.div>

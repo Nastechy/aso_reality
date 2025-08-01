@@ -21,7 +21,6 @@ export default function Home() {
         <VisionMissionComponent />
         <FeaturedPropertiesSection />
         <WhyChooseAsoRealty />
-        <TestimonialSection />
         {/* <OurTeamSection /> */}
         <ContactSection />
         <Footer />

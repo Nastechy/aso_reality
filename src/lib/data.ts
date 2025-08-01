@@ -3,7 +3,6 @@ export type Property = {
   id: number;
   title: string;
   location: string;
-  price: string;
   rating: number;
   reviews: number;
   bedrooms: number;
@@ -20,7 +19,6 @@ export const properties: Property[] = [
     id: 1,
     title: "Spacious Terrace House",
     location: "Lagos",
-    price: "₦ 74 Million",
     rating: 4.8,
     reviews: 348,
     bedrooms: 4,
@@ -35,7 +33,6 @@ export const properties: Property[] = [
     id: 2,
     title: "Modern Villa Estate",
     location: "Abuja",
-    price: "₦ 120 Million",
     rating: 4.9,
     reviews: 256,
     bedrooms: 5,
@@ -50,7 +47,6 @@ export const properties: Property[] = [
     id: 3,
     title: "Luxury Penthouse",
     location: "Victoria Island",
-    price: "₦ 95 Million",
     rating: 4.7,
     reviews: 189,
     bedrooms: 3,
@@ -65,7 +61,6 @@ export const properties: Property[] = [
     id: 4,
     title: "Family Duplex",
     location: "Lekki",
-    price: "₦ 68 Million",
     rating: 4.6,
     reviews: 412,
     bedrooms: 4,
@@ -80,7 +75,6 @@ export const properties: Property[] = [
     id: 5,
     title: "Contemporary Bungalow",
     location: "Ikeja",
-    price: "₦ 45 Million",
     rating: 4.5,
     reviews: 298,
     bedrooms: 3,
@@ -95,7 +89,6 @@ export const properties: Property[] = [
     id: 6,
     title: "Executive Mansion",
     location: "Banana Island",
-    price: "₦ 180 Million",
     rating: 5.0,
     reviews: 156,
     bedrooms: 6,
@@ -110,7 +103,6 @@ export const properties: Property[] = [
     id: 7,
     title: "Smart Home Villa",
     location: "Ikoyi",
-    price: "₦ 110 Million",
     rating: 4.8,
     reviews: 223,
     bedrooms: 4,
@@ -125,7 +117,6 @@ export const properties: Property[] = [
     id: 8,
     title: "Garden View Residence",
     location: "Magodo",
-    price: "₦ 58 Million",
     rating: 4.4,
     reviews: 367,
     bedrooms: 3,
@@ -140,7 +131,6 @@ export const properties: Property[] = [
     id: 9,
     title: "City Centre Apartment",
     location: "Yaba",
-    price: "₦ 38 Million",
     rating: 4.3,
     reviews: 181,
     bedrooms: 2,
@@ -155,7 +145,6 @@ export const properties: Property[] = [
     id: 10,
     title: "Beachfront Chalet",
     location: "Lekki Phase 1",
-    price: "₦ 125 Million",
     rating: 4.9,
     reviews: 142,
     bedrooms: 5,
@@ -170,7 +159,6 @@ export const properties: Property[] = [
     id: 11,
     title: "Classic Colonial Home",
     location: "Surulere",
-    price: "₦ 52 Million",
     rating: 4.2,
     reviews: 221,
     bedrooms: 4,
@@ -185,7 +173,6 @@ export const properties: Property[] = [
     id: 12,
     title: "Skyline Loft",
     location: "Marina",
-    price: "₦ 79 Million",
     rating: 4.8,
     reviews: 312,
     bedrooms: 3,

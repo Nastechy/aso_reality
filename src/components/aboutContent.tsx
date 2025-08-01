@@ -75,7 +75,7 @@ export default function About() {
                                 className="text-gray-600  leading-relaxed"
                                 variants={textVariants}
                             >
-                                <span className="font-[12px] flex flex-col gap-4">
+                                <span className="text-[14px] md:text-[16px] flex flex-col gap-4">
                                     <span>
                                         At <span className="font-bold text-b">ASO REALTY LIMITED</span>, we believe in building more
                                         than just structures; we cultivate lasting prosperity.

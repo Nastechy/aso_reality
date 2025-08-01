@@ -97,7 +97,7 @@ const StatsComponent: React.FC = () => {
     };
 
     return (
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-10 md:py-20 px-4">
             <div className="max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {stats.map((stat: Stat, index: number) => (
@@ -131,10 +131,10 @@ const StatsComponent: React.FC = () => {
                             <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl" />
 
                             <div className="relative z-10 text-center">
-                                <div className={`text-5xl font-bold mb-2 ${stat.color} transition-all duration-300 group-hover:scale-110`}>
+                                <div className={`md:text-5xl text-3xl font-bold mb-2 ${stat.color} transition-all duration-300 group-hover:scale-110`}>
                                     {getDisplayValue(stat.id, getCounterValue(stat.id))}
                                 </div>
-                                <div className="text-gray-600 font-medium text-sm leading-relaxed">
+                                <div className="text-gray-600 font-medium text-[12px] md:text-[14px] leading-relaxed">
                                     {stat.label}
                                 </div>
                             </div>

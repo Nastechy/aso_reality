@@ -17,10 +17,10 @@ export default function FeaturedPropertiesSection() {
     <div className="bg-white py-10 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             Explore Our Featured Properties
           </h2>
-          <p className="text-base md:text-lg text-gray-600 mb-2 max-w-2xl mx-auto">
+          <p className="text-[14px] md:text-[16px] text-gray-600 mb-2 max-w-2xl mx-auto">
             Discover a curated selection of the finest homes and investment opportunities available now.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-[#08194A] to-red-600 mx-auto rounded-full"></div>
@@ -73,8 +73,8 @@ export default function FeaturedPropertiesSection() {
                   </div>
                   <span className="text-sm text-gray-500 ml-2">({property.reviews} Reviews)</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xl font-bold text-gray-900">{property.price}</span>
+                <div className="flex items-end justify-end">
+                  {/* <span className="text-xl font-bold text-gray-900">{property.price}</span> */}
                   <button
                     onClick={() => setSelectedProperty(property)}
                     className="bg-[#981314] text-white cursor-pointer px-4 py-2 rounded-[3px] text-[10px] font-bold hover:bg-[#08194A] transition-colors duration-200"
@@ -87,10 +87,10 @@ export default function FeaturedPropertiesSection() {
           ))}
         </div>
 
-        <div className="text-center mt-14">
+        <div className="text-center mt-10 md:mt-16">
           <button
-            className="bg-[#08194A] text-[13px] cursor-pointer text-white px-8 py-3 rounded-lg font-bold hover:bg-[#981314] transition-colors duration-200"
-            onClick={() => router.push("/properties")}
+            className="bg-[#981314] text-[13px] cursor-pointer text-white px-8 py-3 rounded-lg font-bold hover:bg-[#08194A] transition-colors duration-200"
+            onClick={() => router.push("/properties")} 
           >
             View All Properties
           </button>
