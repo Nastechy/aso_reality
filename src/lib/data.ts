@@ -5,11 +5,8 @@ export type Property = {
   location: string;
   rating: number;
   reviews: number;
-  bedrooms: number;
-  bathrooms: number;
   area: string;
   images: string[];
-  tag: string;
   tagColor: string;
   description: string;
 };
@@ -17,172 +14,138 @@ export type Property = {
 export const properties: Property[] = [
   {
     id: 1,
-    title: "Spacious Terrace House",
-    location: "Lagos",
+    title: "Pearlview Residences Waru, Apo Topaz (Tafyi)",
+    location: "Apo",
     rating: 4.8,
     reviews: 348,
-    bedrooms: 4,
-    bathrooms: 3,
-    area: "2,500 sqft",
-    images: ["/image3.jpg", "/house1.jpg", "/house2.jpg"],
-    tag: "SALE",
+    area: "250 sqm, 350sqm, 450sqm,",
+    images: ["/Building2.jpg", "/Building2.jpg", "/Building2.jpg"],
     tagColor: "bg-red-500",
-    description: "A beautiful, spacious terrace house in Lagos with modern finishes and family-friendly amenities."
+    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
     id: 2,
-    title: "Modern Villa Estate",
-    location: "Abuja",
+    title: "Primelux Estate Wumba district",
+    location: "Apo",
     rating: 4.9,
     reviews: 256,
-    bedrooms: 5,
-    bathrooms: 4,
-    area: "3,200 sqft",
-    images: ["/house1.jpg", "/house2.jpg", "/image3.jpg"],
-    tag: "NEW",
+    area: "250 sqm, 350sqm, 450sqm,",
+    images: ["/Building1.jpg", "/Building1.jpg", "/Building1.jpg"],
     tagColor: "bg-green-500",
-    description: "Modern villa estate in Abuja, luxury amenities, serene environment and top-notch security."
+    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
     id: 3,
-    title: "Luxury Penthouse",
-    location: "Victoria Island",
+    title: "Casa Moderna, Wingate Estate",
+    location: "Kuje",
     rating: 4.7,
     reviews: 189,
-    bedrooms: 3,
-    bathrooms: 3,
-    area: "1,800 sqft",
-    images: ["/house2.jpg", "/image3.jpg", "/house3.jpg"],
-    tag: "SALE",
+    area: "250 sqm, 350sqm, 450sqm,",
+    images: ["/Building3.jpg", "/Building3.jpg", "/Building3.jpg"],
     tagColor: "bg-red-500",
-    description: "A luxury penthouse with panoramic city views, rooftop pool, and elegant living spaces."
+    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
     id: 4,
-    title: "Family Duplex",
-    location: "Lekki",
+    title: "Sunview City Estate ",
+    location: "Kuje",
     rating: 4.6,
     reviews: 412,
-    bedrooms: 4,
-    bathrooms: 3,
-    area: "2,100 sqft",
-    images: ["/house3.jpg", "/house4.jpg", "/house1.jpg"],
-    tag: "HOT",
+    area: "250 sqm, 350sqm, 450sqm,",
+    images: ["/Building5.jpg", "/Building5.jpg", "/Building5.jpg"],
     tagColor: "bg-orange-500",
-    description: "Spacious duplex ideal for families, great neighborhood, close to schools and shops."
+    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
     id: 5,
-    title: "Contemporary Bungalow",
-    location: "Ikeja",
+    title: "Dynasty City Estate Guzape 2",
+    location: "Guzape",
     rating: 4.5,
     reviews: 298,
-    bedrooms: 3,
-    bathrooms: 2,
-    area: "1,600 sqft",
-    images: ["/house4.jpg", "/image3.jpg", "/house2.jpg"],
-    tag: "SALE",
+    area: "250 sqm, 350sqm, 450sqm,",
+    images: ["/Building4.jpg", "/Building4.jpg", "/Building4.jpg"],
     tagColor: "bg-red-500",
-    description: "A contemporary bungalow in Ikeja, secure estate, beautiful landscape, and private backyard."
+    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
     id: 6,
-    title: "Executive Mansion",
-    location: "Banana Island",
+    title: "Double King Villa phase 1&2",
+    location: "Guzape 2",
     rating: 5.0,
     reviews: 156,
-    bedrooms: 6,
-    bathrooms: 5,
-    area: "4,500 sqft",
-    images: ["/image3.jpg", "/house1.jpg", "/house3.jpg"],
-    tag: "PREMIUM",
+    area: "250 sqm, 350sqm, 450sqm,",
+    images: ["/Building6.jpg", "/Building6.jpg", "/Building6.jpg"],
     tagColor: "bg-purple-500",
-    description: "Live in luxury with this executive mansion, exclusive location and top-class facilities."
+    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
     id: 7,
-    title: "Smart Home Villa",
-    location: "Ikoyi",
+    title: "Grandeur City Aso. Ext",
+    location: "Asokoro Ext.",
     rating: 4.8,
     reviews: 223,
-    bedrooms: 4,
-    bathrooms: 4,
-    area: "2,800 sqft",
-    images: ["/house1.jpg", "/house2.jpg", "/house4.jpg"],
-    tag: "NEW",
+    area: "200 sqm, 300sqm, 400sqm,",
+    images: ["/Building7.jpg", "/Building7.jpg", "/Building7.jpg"],
     tagColor: "bg-green-500",
-    description: "A smart home villa equipped with the latest home automation tech and solar energy."
+    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
     id: 8,
-    title: "Garden View Residence",
-    location: "Magodo",
+    title: "Royal Hills Aso. Ext",
+    location: "Asokoro Ext.",
     rating: 4.4,
     reviews: 367,
-    bedrooms: 3,
-    bathrooms: 3,
-    area: "1,900 sqft",
-    images: ["/house2.jpg", "/house1.jpg", "/image3.jpg"],
-    tag: "SALE",
+    area: "200 sqm, 300sqm, 400sqm,",
+    images: ["/Building8.jpg", "/Building8.jpg", "/Building8.jpg"],
     tagColor: "bg-red-500",
-    description: "Enjoy tranquility in this garden view residence with a relaxing private courtyard."
+    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
     id: 9,
-    title: "City Centre Apartment",
-    location: "Yaba",
+    title: "Pearlview Residences Waru, Apo Topaz (Tafyi)",
+    location: "Apo",
     rating: 4.3,
     reviews: 181,
-    bedrooms: 2,
-    bathrooms: 2,
-    area: "1,200 sqft",
-    images: ["/house3.jpg", "/house4.jpg", "/image3.jpg"],
-    tag: "RENT",
+    area: "250 sqm, 350sqm, 450sqm,",
+    images: ["/Building9.jpg", "/Building9.jpg", "/Building9.jpg"],
     tagColor: "bg-blue-500",
-    description: "City centre apartment close to business hubs, fully serviced, high-speed internet included."
+    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
     id: 10,
-    title: "Beachfront Chalet",
-    location: "Lekki Phase 1",
+    title: "Casa Moderna, Wingate Estate",
+    location: "Kuje",
     rating: 4.9,
     reviews: 142,
-    bedrooms: 5,
-    bathrooms: 5,
-    area: "3,600 sqft",
-    images: ["/house4.jpg", "/house1.jpg", "/house2.jpg"],
-    tag: "HOT",
+    area: "250 sqm, 350sqm, 450sqm,",
+    images: ["/Building10.jpg", "/Building10.jpg", "/Building10.jpg"],
     tagColor: "bg-orange-500",
-    description: "Wake up to the sound of waves in this stunning beachfront chalet, private access to the beach."
+    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
     id: 11,
-    title: "Classic Colonial Home",
-    location: "Surulere",
+    title: "Dynasty City Estate Guzape 2",
+    location: "Guzape",
     rating: 4.2,
     reviews: 221,
-    bedrooms: 4,
-    bathrooms: 3,
-    area: "2,200 sqft",
-    images: ["/image3.jpg", "/house3.jpg", "/house2.jpg"],
-    tag: "SALE",
+    area: "250 sqm, 350sqm, 450sqm,",
+    images: ["/Building11.jpg", "/Building11.jpg", "/Building11.jpg"],
     tagColor: "bg-red-500",
-    description: "Classic colonial home with restored features and large entertaining spaces."
+    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
-  {
-    id: 12,
-    title: "Skyline Loft",
-    location: "Marina",
-    rating: 4.8,
-    reviews: 312,
-    bedrooms: 3,
-    bathrooms: 3,
-    area: "2,000 sqft",
-    images: ["/house1.jpg", "/house2.jpg", "/house4.jpg"],
-    tag: "PREMIUM",
-    tagColor: "bg-purple-500",
-    description: "Modern skyline loft with breathtaking city views and floor-to-ceiling windows."
-  }
+  // {
+  //   id: 12,
+  //   title: "Skyline Loft",
+  //   location: "Marina",
+  //   rating: 4.8,
+  //   reviews: 312,
+  //   bedrooms: 3,
+  //   bathrooms: 3,
+  //   area: "2,000 sqft",
+  //   images: ["/Building12.jpg", "/Building12.jpg", "/Building12.jpg"],
+  //   tagColor: "bg-purple-500",
+  //   description: "Modern skyline loft with breathtaking city views and floor-to-ceiling windows."
+  // }
 ];
 
 

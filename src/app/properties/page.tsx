@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { properties, Property } from "@/lib/data";
-import { Star, MapPin, Bed, Bath, Square, X, Mail, Phone } from "lucide-react";
+import { Star, MapPin, Square, X, Mail, Phone } from "lucide-react";
 import PropertyGallery from "@/components/propertyGallery";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -131,9 +131,6 @@ export default function PropertiesPage() {
                   alt={property.title}
                   className="w-full h-48 object-cover"
                 />
-                <div className={`absolute top-3 left-3 ${property.tagColor} text-white px-2 py-1 rounded-md text-[10px] font-bold`}>
-                  {property.tag}
-                </div>
               </div>
               <div className="p-4">
                 <h3 className="text-[16px] font-bold text-gray-900 mb-2 line-clamp-1">
@@ -144,14 +141,6 @@ export default function PropertiesPage() {
                   <span className="text-sm">{property.location}</span>
                 </div>
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-                  <div className="flex items-center">
-                    <Bed className="w-4 h-4 mr-1" />
-                    <span>{property.bedrooms}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Bath className="w-4 h-4 mr-1" />
-                    <span>{property.bathrooms}</span>
-                  </div>
                   <div className="flex items-center">
                     <Square className="w-4 h-4 mr-1" />
                     <span>{property.area}</span>
@@ -208,9 +197,6 @@ export default function PropertiesPage() {
               </div>
               <div className="flex-1 flex flex-col px-6 pb-6 pt-2 md:p-0">
                 <div className="flex items-center space-x-3 mb-2">
-                  <span className={`px-2 py-1 rounded text-xs font-bold ${selectedProperty.tagColor} text-white`}>
-                    {selectedProperty.tag}
-                  </span>
                   <span className="text-gray-500 text-xs">{selectedProperty.location}</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-2">{selectedProperty.title}</h3>
@@ -223,14 +209,6 @@ export default function PropertiesPage() {
                   {selectedProperty.description || "No extra description available for this property."}
                 </div>
                 <div className="flex flex-wrap gap-4 mb-4 text-gray-600 text-sm">
-                  <div className="flex items-center">
-                    <Bed className="w-5 h-5 mr-1" />
-                    <span>{selectedProperty.bedrooms} Bedrooms</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Bath className="w-5 h-5 mr-1" />
-                    <span>{selectedProperty.bathrooms} Bathrooms</span>
-                  </div>
                   <div className="flex items-center">
                     <Square className="w-5 h-5 mr-1" />
                     <span>{selectedProperty.area}</span>
