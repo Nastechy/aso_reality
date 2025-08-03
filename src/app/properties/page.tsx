@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
-import AllPropertiesPage from "@/components/allProperties";
+import AllPropertiesPage from "@/components/pageSections/allProperties";
 
 export const metadata = {
   title: "Properties - Aso Realty",
