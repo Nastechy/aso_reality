@@ -8,6 +8,7 @@ import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Seo from "@/components/seo";
 
 const gridVariants = {
   hidden: {},
@@ -16,10 +17,6 @@ const gridVariants = {
   }
 };
 
-// const cardVariants = {
-//   hidden: { opacity: 0, y: 35, scale: 0.97 },
-//   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
-// };
 
 export default function PropertiesPage() {
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
@@ -45,10 +42,14 @@ export default function PropertiesPage() {
   const closeModal = () => setSelectedProperty(null);
 
   return (
-    <div className="bg-white min-h-screen">
-      {/* HERO SECTION */}
+    <>
+       <Seo
+        title="Properties - Aso Realty"
+        description="Browse all available properties for sale and rent. Find your dream home or investment opportunity with Aso Realty."
+        url="https://www.asorealty.com/properties"
+      />
+     <div className="bg-white min-h-screen">
       <div className="relative w-full h-96 md:h-[740px] flex items-center justify-center mb-6 overflow-hidden">
-        {/* Animated background */}
         <motion.div
           className="absolute inset-0"
           initial={{ opacity: 0, scale: 1.08 }}
@@ -59,7 +60,7 @@ export default function PropertiesPage() {
             width={1920}
             height={800}
             src="/image3.jpg"
-            alt="Properties Background"
+            alt="Properties Background image"
             className="w-full h-full object-cover"
             priority
           />
@@ -232,5 +233,7 @@ export default function PropertiesPage() {
       )}
       <Footer />
     </div>
+    </>
+   
   );
 }

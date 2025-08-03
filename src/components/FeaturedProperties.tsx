@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Star, MapPin, Bed, Bath, Square, X, Mail, Phone } from "lucide-react";
+import { Star, MapPin, Square, X, Mail, Phone } from "lucide-react";
 import { Property, properties } from "@/lib/data";
 import PropertyGallery from "./propertyGallery";
 import Image from "next/image";

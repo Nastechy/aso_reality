@@ -116,7 +116,7 @@ export default function About() {
                             <motion.div className="relative overflow-hidden rounded shadow cursor-pointer">
                                 <Image
                                     src="/stirs.jpg"
-                                    alt="stirs pics"
+                                    alt="stirs picture"
                                     width={570}
                                     height={350}
                                     className="w-full h-[350px] md:h-[450px] lg:h-[600px] object-cover"

@@ -37,7 +37,7 @@ export function Navbar() {
         <nav className="flex items-center justify-between md:px-20 px-3 shadow sticky top-0 z-50">
             <div >
                 <Link href="/" >
-                    <Image src="/asologo.png" alt="PYA Logo" width={100} height={50} />
+                    <Image src="/asologo.png" alt="aso company Logo" width={100} height={50} />
                 </Link>
             </div>
 
