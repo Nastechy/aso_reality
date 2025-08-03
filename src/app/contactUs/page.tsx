@@ -5,7 +5,7 @@ import ContactSection from "@/components/contactus";
 import { Navbar } from "@/components/navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Seo from "@/components/seo";
+import Seo from "@/components/Seo";
 
 export default function ContactPage() {
     return (

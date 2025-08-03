@@ -7,7 +7,7 @@ import { Navbar } from "@/components/navbar";
 import VisionMissionComponent from "@/components/visionandmission";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Seo from "@/components/seo";
+import Seo from "@/components/Seo";
 
 export default function AboutPage() {
   return (

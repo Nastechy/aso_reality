@@ -6,7 +6,7 @@ import OurTeamSection from "@/components/ourteam";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import TestimonialSection from "@/components/testimonial";
-import Seo from "@/components/seo";
+import Seo from "@/components/Seo";
 
 export default function OurTeamPage() {
   return (
