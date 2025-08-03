@@ -272,8 +272,7 @@ export default function HeroSlider() {
         }
     };
 
-    const mapsUrl =
-        "https://www.google.com/maps/search/?api=1&query=Abuja+Nigeria";
+    const mapsUrl = "https://www.google.com/maps/search/?api=1&query=C1,+Amaka+Mall,+9+San+Zangon+Daura+Street,+Guzape,+Abuja,+Nigeria,+900211";
 
     return (
         <section
