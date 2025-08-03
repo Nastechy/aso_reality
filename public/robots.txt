@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.asorealty.com
+
+# Sitemaps
+Sitemap: https://www.asorealty.com/sitemap.xml
