@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import OrganizationJsonLd from "@/components/OrganizationJsonLd";
 
 
 
@@ -21,6 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <OrganizationJsonLd />
+      </head>
       <body >
         {children}
       </body>
