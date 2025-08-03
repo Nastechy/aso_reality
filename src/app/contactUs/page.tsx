@@ -5,16 +5,39 @@ import ContactSection from "@/components/contactus";
 import { Navbar } from "@/components/navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Seo from "@/components/Seo";
+
+
+export const metadata = {
+    title: "Contact Us - Aso Realty",
+    description: "We’d love to hear from you. Reach out today and let us know how we can help.",
+    alternates: {
+      canonical: "https://www.asorealty.com/contactUs",
+    },
+    openGraph: {
+      title: "Contact Us - Aso Realty",
+      description: "We’d love to hear from you. Reach out today and let us know how we can help.",
+      url: "https://www.asorealty.com/contactUs",
+      images: [
+        {
+          url: "/asologo.png",
+          width: 800,
+          height: 600,
+          alt: "Aso Realty Logo",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Contact Us - Aso Realty",
+      description: "We’d love to hear from you. Reach out today and let us know how we can help.",
+      images: ["/asologo.png"],
+    },
+  };
+  
 
 export default function ContactPage() {
     return (
         <>
-            <Seo
-                title="Contact Us - Aso Realty"
-                description="Get in touch with our team for all your real estate needs. We're here to help you find the perfect home or investment."
-                url="https://www.asorealty.com/contactUs"
-            />
             <div className="min-h-screen bg-white">
                 <div className="relative w-full h-96 md:h-[750px] flex items-center justify-center overflow-hidden">
                     <motion.div

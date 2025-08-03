@@ -7,16 +7,39 @@ import { Navbar } from "@/components/navbar";
 import VisionMissionComponent from "@/components/visionandmission";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Seo from "@/components/Seo";
+
+
+export const metadata = {
+  title: "About Us - Aso Realty",
+  description: "Learn more about our journey, values, and what drives us to serve you better every day.",
+  alternates: {
+    canonical: "https://www.asorealty.com/aboutUs",
+  },
+  openGraph: {
+    title: "About Us - Aso Realty",
+    description: "Learn more about our journey, values, and what drives us to serve you better every day.",
+    url: "https://www.asorealty.com/aboutUs",
+    images: [
+      {
+        url: "/asologo.png",
+        width: 800,
+        height: 600,
+        alt: "Aso Realty Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us - Aso Realty",
+    description: "Learn more about our journey, values, and what drives us to serve you better every day.",
+    images: ["/asologo.png"],
+  },
+};
+
 
 export default function AboutPage() {
   return (
     <>
-      <Seo
-        title="About Us - Aso Realty"
-        description="Learn more about our journey, values, and what drives us to serve you better every day."
-        url="https://www.asorealty.com/aboutUs"
-      />
 
       <div className="min-h-screen bg-white">
         <div className="relative w-full h-96 md:h-[740px] flex items-center justify-center overflow-hidden">

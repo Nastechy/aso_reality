@@ -7,6 +7,7 @@ import OrganizationJsonLd from "@/components/OrganizationJsonLd";
 export const metadata: Metadata = {
   title: 'Aso Realty',
   description: 'Find your dream home or investment with Aso Realty.',
+  metadataBase: new URL("https://www.asorealty.com"),
 };
 
 export const viewport = {

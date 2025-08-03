@@ -6,16 +6,39 @@ import OurTeamSection from "@/components/ourteam";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import TestimonialSection from "@/components/testimonial";
-import Seo from "@/components/Seo";
+
+
+export const metadata = {
+  title: "Our Team - Aso Realty",
+  description: "Meet the passionate people driving our mission and innovation every day.",
+  alternates: {
+    canonical: "https://www.asorealty.com/ourTeam",
+  },
+  openGraph: {
+    title: "Our Team - Aso Realty",
+    description: "Meet the passionate people driving our mission and innovation every day.",
+    url: "https://www.asorealty.com/ourTeam",
+    images: [
+      {
+        url: "/asologo.png",
+        width: 800,
+        height: 600,
+        alt: "Aso Realty Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Team - Aso Realty",
+    description: "Meet the passionate people driving our mission and innovation every day.",
+    images: ["/asologo.png"],
+  },
+};
+
 
 export default function OurTeamPage() {
   return (
     <>
-      <Seo
-        title="Our Team - Aso Realty"
-        description="Meet the passionate people driving our mission and innovation every day at Aso Realty."
-        url="https://www.asorealty.com/ourTeam"
-      />
 
       <div className="min-h-screen bg-white">
         <div className="relative w-full h-96 md:h-[740px] flex items-center justify-center overflow-hidden">
