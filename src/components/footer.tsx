@@ -17,7 +17,9 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                             ASO REALTY LIMITED
                         </h3>
                         <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                            ASO Realty Limited (RC: 7917733) is passionate about helping to empower families by providing them with and strengthening communities for the real businesses.
+                            ASO Realty Limited (RC: 7917733) is dedicated to
+                            making property ownership accessible, secure, and
+                             straightforward, helping you invest confidently in your future.
                         </p>
 
                         <div className="flex space-x-4">

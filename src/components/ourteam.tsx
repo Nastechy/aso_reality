@@ -112,7 +112,8 @@ const OurTeamSection = () => (
                                     width={200}
                                     src={member.image}
                                     alt={member.name}
-                                    className="w-full h-full object-cintain transition-all duration-300 group-hover:object-contain"
+                                    priority
+                                    className="w-full h-full object-contain transition-all duration-300 group-hover:object-contain"
                                     style={{ aspectRatio: "1 / 1" }}
                                     draggable={false}
                                 />
