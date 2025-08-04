@@ -6,6 +6,7 @@ import { Star, MapPin, Square, X, Mail, Phone } from "lucide-react";
 import PropertyGallery from "@/components/propertyGallery";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Navbar } from "../navbar";
 
 const gridVariants = {
     hidden: {},
@@ -41,7 +42,7 @@ export default function AllPropertiesPage() {
     return (
         <>
             <div className="bg-white min-h-screen">
-                <div className="relative w-full h-96 md:h-[740px] flex items-center justify-center mb-6 overflow-hidden">
+                <div className="relative w-full h-96 md:h-[800px] flex items-center justify-center mb-6 overflow-hidden">
                     <motion.div
                         className="absolute inset-0"
                         initial={{ opacity: 0, scale: 1.08 }}
@@ -63,6 +64,9 @@ export default function AllPropertiesPage() {
                             className="absolute inset-0 bg-black"
                         />
                     </motion.div>
+                    <div >
+                        <Navbar />
+                    </div>
 
                     {/* Animated headline and subtext */}
                     <motion.div

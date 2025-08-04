@@ -32,7 +32,6 @@ export const metadata = {
 export default function PropertiesPage() {
   return (
     <div className="bg-white min-h-screen">
-      <Navbar />
       <AllPropertiesPage />
       <Footer />
     </div>

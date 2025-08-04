@@ -12,7 +12,7 @@ const teamMembers = [
         position: "Managing Director",
         image: "/NewGM.jpg",
         phone: "+234 803 761 6518",
-        email: "adebayo.johnson@asorealty.com",
+        email: "abrahamogo35@gmail.com",
         social: {
             linkedin: "Azi Abraham ",
             twitter: "Azi Abraham ",

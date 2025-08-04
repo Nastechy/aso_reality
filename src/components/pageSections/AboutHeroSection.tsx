@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function AboutHeroSection() {
     return (
-        <div className="relative w-full h-96 md:h-[740px] flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-96 md:h-[800px] flex items-center justify-center overflow-hidden">
             <motion.div
                 initial={{ scale: 1.1, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}

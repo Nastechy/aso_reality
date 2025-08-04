@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function TeamHeroSection() {
   return (
-    <div className="relative w-full h-96 md:h-[740px] flex items-center justify-center overflow-hidden">
+    <div className="relative w-full h-96 md:h-[800px] flex items-center justify-center overflow-hidden">
       <motion.div
         className="absolute inset-0"
         initial={{ opacity: 0, scale: 1.08 }}
