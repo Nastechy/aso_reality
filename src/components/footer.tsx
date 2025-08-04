@@ -14,10 +14,10 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="md:col-span-1 ">
                         <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-                            ASO REALLY LIMITED
+                            ASO REALTY LIMITED
                         </h3>
                         <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                            ASO Really Limited (RC: 7917733) is passionate about helping to empower families by providing them with and strengthening communities for the real businesses.
+                            ASO Realty Limited (RC: 7917733) is passionate about helping to empower families by providing them with and strengthening communities for the real businesses.
                         </p>
 
                         <div className="flex space-x-4">
