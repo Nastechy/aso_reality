@@ -25,12 +25,12 @@ export const properties: Property[] = [
   },
   {
     id: 2,
-    title: "Primelux Estate Wumba district",
-    location: "Apo",
+    title: "Linkside City ",
+    location: "Pyakasa",
     rating: 4.9,
     reviews: 256,
     area: "250 sqm, 350sqm, 450sqm,",
-    images: ["/Building1.jpg", "/Building1.jpg", "/Building1.jpg"],
+    images: ["/Building12.jpg", "/Building12.jpg", "/Building12.jpg"],
     tagColor: "bg-green-500",
     description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
@@ -47,12 +47,12 @@ export const properties: Property[] = [
   },
   {
     id: 4,
-    title: "Sunview City Estate ",
-    location: "Kuje",
+    title: "Linkside City",
+    location: "Pyakasa",
     rating: 4.6,
     reviews: 412,
     area: "250 sqm, 350sqm, 450sqm,",
-    images: ["/Building5.jpg", "/Building5.jpg", "/Building5.jpg"],
+    images: ["/Building13.jpg", "/Building13.jpg", "/Building13.jpg"],
     tagColor: "bg-orange-500",
     description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },

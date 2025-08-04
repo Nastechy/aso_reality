@@ -34,62 +34,6 @@ const teamMembers = [
             facebook: "emmyeli_jah"
         }
     },
-    {
-        id: 3,
-        name: "Fatima Abdullahi",
-        position: "Property Manager",
-        image: "/Invisible.png",
-        phone: "+234 803 456 7890",
-        email: "fatima.abdullahi@asorealty.com",
-        social: {
-            linkedin: "fatima-abdullahi-properties",
-            twitter: "fatima_prop",
-            instagram: "fatima.properties",
-            facebook: "fatima.abdullahi.pm"
-        }
-    },
-    {
-        id: 4,
-        name: "Chidi Okafor",
-        position: "Investment Consultant",
-        image: "/Invisible.png",
-        phone: "+234 804 567 8901",
-        email: "chidi.okafor@asorealty.com",
-        social: {
-            linkedin: "chidi-okafor-investment",
-            twitter: "chidi_invests",
-            instagram: "chidi.realestate",
-            facebook: "chidi.okafor.consultant"
-        }
-    },
-    {
-        id: 5,
-        name: "Amina Hassan",
-        position: "Marketing Director",
-        image: "/Invisible.png",
-        phone: "+234 805 678 9012",
-        email: "amina.hassan@asorealty.com",
-        social: {
-            linkedin: "amina-hassan-marketing",
-            twitter: "amina_markets",
-            instagram: "amina.marketing",
-            facebook: "amina.hassan.director"
-        }
-    },
-    {
-        id: 6,
-        name: "Tunde Adebayo",
-        position: "Legal Advisor",
-        image: "/Invisible.png",
-        phone: "+234 806 789 0123",
-        email: "tunde.adebayo@asorealty.com",
-        social: {
-            linkedin: "tunde-adebayo-legal",
-            twitter: "tunde_legal",
-            instagram: "tunde.legal",
-            facebook: "tunde.adebayo.lawyer"
-        }
-    }
 ];
 
 const containerVariants: Variants = {
