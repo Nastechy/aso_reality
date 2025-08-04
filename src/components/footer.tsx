@@ -17,7 +17,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                             ASO REALLY LIMITED
                         </h3>
                         <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                            ASO Really Limited (RC: xxxxxxx) is passionate about helping to empower families by providing them with and strengthening communities for the real businesses.
+                            ASO Really Limited (RC: 7917733) is passionate about helping to empower families by providing them with and strengthening communities for the real businesses.
                         </p>
 
                         <div className="flex space-x-4">
