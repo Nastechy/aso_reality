@@ -28,7 +28,7 @@ export function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 w-full z-50 bg-[#08194A] shadow">
-            <div className="flex items-center justify-between md:px-20 px-3 h-24">
+            <div className="flex items-center justify-between md:px-20 px-3 h-16 md:h-24">
                 <div>
                     <Link href="/">
                         <Image src="/asologo.png" alt="Aso company Logo" width={100} height={50} />
