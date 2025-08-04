@@ -68,8 +68,12 @@ const ContactSection: React.FC = () => {
                                     <span className="bg-white/20 rounded-lg p-2 flex items-center">
                                         <Mail className="md:w-5 md:h-5 h-3 w-3 text-white" />
                                     </span>
-                                    <span className="text-white text-[14px] md:text-base">asorealtylimted@gmail.com</span>
-                                </div>
+                                    <a
+                                        href="mailto:asorealtylimted@gmail.com"
+                                        className="text-white underline text-[14px] md:text-base hover:text-[#ffd700] transition"
+                                    >
+                                        asorealtylimted@gmail.com
+                                    </a>                                </div>
                                 <div className="flex items-center gap-3">
                                     <span className="bg-white/20 rounded-lg p-2 flex items-center">
                                         <MapPin className="md:w-5 md:h-5 h-3 w-3 text-white" />
