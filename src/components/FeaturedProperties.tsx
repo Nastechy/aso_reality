@@ -1,17 +1,31 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Star, MapPin, Square, X, Mail, Phone } from "lucide-react";
 import { Property, properties } from "@/lib/data";
 import PropertyGallery from "./propertyGallery";
 import Image from "next/image";
 
-
 export default function FeaturedPropertiesSection() {
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
+  const [sliceCount, setSliceCount] = useState(4); // default to 4
   const router = useRouter();
   const closeModal = () => setSelectedProperty(null);
+
+  useEffect(() => {
+    // Helper to detect small screen
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setSliceCount(3);
+      } else {
+        setSliceCount(4);
+      }
+    };
+    handleResize(); // on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="bg-white py-10 md:py-24 px-4">
@@ -27,7 +41,7 @@ export default function FeaturedPropertiesSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {properties.slice(0, 4).map((property) => (
+          {properties.slice(0, sliceCount).map((property) => (
             <div
               key={property.id}
               className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
@@ -40,7 +54,6 @@ export default function FeaturedPropertiesSection() {
                   alt={property.title}
                   className="w-full h-48 object-cover"
                 />
-               
               </div>
               <div className="p-4">
                 <h3 className="text-[16px] font-bold text-gray-900 mb-2 line-clamp-1">
@@ -64,7 +77,6 @@ export default function FeaturedPropertiesSection() {
                   <span className="text-sm text-gray-500 ml-2">({property.reviews} Reviews)</span>
                 </div>
                 <div className="flex items-end justify-end">
-                  {/* <span className="text-xl font-bold text-gray-900">{property.price}</span> */}
                   <button
                     onClick={() => setSelectedProperty(property)}
                     className="bg-[#981314] text-white cursor-pointer px-4 py-2 rounded-[3px] text-[10px] font-bold hover:bg-[#08194A] transition-colors duration-200"
@@ -126,11 +138,11 @@ export default function FeaturedPropertiesSection() {
                   <div className="font-semibold mb-2">Contact Agent</div>
                   <div className="flex items-center mb-1">
                     <Mail className="w-4 h-4 mr-2 text-[#981314]" />
-                    <span className="text-gray-800 text-sm">info@asorealty.com</span>
+                    <span className="text-gray-800 text-sm">asorealtylimited@gmail.com</span>
                   </div>
                   <div className="flex items-center">
                     <Phone className="w-4 h-4 mr-2 text-[#981314]" />
-                    <span className="text-gray-800 text-sm">+234 801 234 5678</span>
+                    <span className="text-gray-800 text-sm">08037616518, 08034109687</span>
                   </div>
                 </div>
               </div>

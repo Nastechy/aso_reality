@@ -213,11 +213,11 @@ export default function AllPropertiesPage() {
                                         <div className="font-semibold mb-2">Contact Agent</div>
                                         <div className="flex items-center mb-1">
                                             <Mail className="w-4 h-4 mr-2 text-[#981314]" />
-                                            <span className="text-gray-800 text-sm">info@asorealty.com</span>
+                                            <span className="text-gray-800 text-sm">asorealtylimted@gmail.com</span>
                                         </div>
                                         <div className="flex items-center">
                                             <Phone className="w-4 h-4 mr-2 text-[#981314]" />
-                                            <span className="text-gray-800 text-sm">+234 801 234 5678</span>
+                                            <span className="text-gray-800 text-sm">08037616518, 08034109687</span>
                                         </div>
                                     </div>
                                 </div>

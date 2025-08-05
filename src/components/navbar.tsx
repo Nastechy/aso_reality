@@ -28,13 +28,7 @@ export function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow">
-                <div className="flex items-center justify-between md:px-20 px-3 h-16 md:h-24">
-                    {/* <div style={{border: '4px solid red'}}>
-                        <Link href="/">
-                            <Image src="/asologo.png" alt="Aso company Logo" width={100} height={50} />
-                        </Link>
-                    </div> */}
-
+                <div className="flex items-center justify-between md:px-20 px-1 h-16 md:h-24">
                     <div className="inline-flex items-center justify-center p-1">
                         <Link href="/">
                             <Image
@@ -75,7 +69,7 @@ export function Navbar() {
                         onClick={() => setIsMenuOpen((v) => !v)}
                         aria-label="Toggle menu"
                     >
-                        {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                        {isMenuOpen ? <X className="h-6 w-6 text-[#0b1020]" /> : <Menu className="h-6 w-6 text-[#0b1020]" />}
                     </button>
                     {/* Mobile menu */}
                     <div
