@@ -27,12 +27,24 @@ export function Navbar() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-[#08194A] shadow">
-            <div className=" flex flex-col">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow">
                 <div className="flex items-center justify-between md:px-20 px-3 h-16 md:h-24">
-                    <div>
+                    {/* <div style={{border: '4px solid red'}}>
                         <Link href="/">
                             <Image src="/asologo.png" alt="Aso company Logo" width={100} height={50} />
+                        </Link>
+                    </div> */}
+
+                    <div className="inline-flex items-center justify-center p-1">
+                        <Link href="/">
+                            <Image
+                                src="/asologo.png"
+                                alt="Aso company Logo"
+                                width={150}
+                                height={120}
+                                className="object-contain rounded-full"
+                                priority
+                            />
                         </Link>
                     </div>
                     <div className="hidden md:flex items-center space-x-16 font-[500] text-[14px]">
@@ -42,7 +54,7 @@ export function Navbar() {
                                 href={route}
                                 className={cn(
                                     "transition-transform font-bold",
-                                    isActive(route) ? "text-[#981314]" : "text-white hover:scale-110"
+                                    isActive(route) ? "text-[#981314]" : "text-[#08194A] hover:border-[#08194A] hover:scale-110 hover:border hover:px-4 hover:py-2 hover:rounded-[4px]"
                                 )}
                             >
                                 {label}
@@ -101,11 +113,6 @@ export function Navbar() {
                         </div>
                     </div>
                 </div>
-                <div className="md:px-24 px-8">
-                    <div className="text-white text-[10px] font-extrabold ">RC: 7917733</div>
-                </div>
-            </div>
-
         </nav>
     );
 }

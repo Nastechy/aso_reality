@@ -10,17 +10,17 @@ import { MapPin } from "lucide-react";
 const heroSlides = [
     {
         id: 1,
-        image: "/house3.jpg",
+        image: "/image22.jpg",
         title: "Find Your Dream Home with Aso Realty Limited",
     },
     {
         id: 2,
-        image: "/image3.jpg",
+        image: "/Heroland.jpg",
         title: "Own geniue Land today with Aso Realty Limited",
     },
     {
         id: 3,
-        image: "/image2.jpg",
+        image: "/house33.jpg",
         title: "Invest wisely with Aso Realty Limited",
     },
 ];
