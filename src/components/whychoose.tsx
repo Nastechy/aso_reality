@@ -96,7 +96,7 @@ const WhyChooseAsoRealty = () => {
                 </motion.div>
 
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
@@ -152,7 +152,7 @@ const WhyChooseAsoRealty = () => {
                     ))}
                 </motion.div>
 
-                <motion.div
+                {/* <motion.div
                     className="text-center mt-12"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -161,7 +161,7 @@ const WhyChooseAsoRealty = () => {
                     <button className="bg-[#08194A] text-[13px] cursor-pointer text-white px-8 py-3 rounded-[3px] font-bold hover:bg-[#981314] transition-colors duration-300 shadow-lg">
                         Get Started Today 
                     </button>
-                </motion.div>
+                </motion.div> */}
             </div>
         </div>
     );

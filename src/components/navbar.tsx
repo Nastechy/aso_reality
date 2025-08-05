@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -28,85 +27,85 @@ export function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow">
-                <div className="flex items-center justify-between md:px-20 px-1 h-16 md:h-24">
-                    <div className="inline-flex items-center justify-center p-1">
-                        <Link href="/">
-                            <Image
-                                src="/asologo.png"
-                                alt="Aso company Logo"
-                                width={150}
-                                height={120}
-                                className="object-contain rounded-full"
-                                priority
-                            />
+            <div className="flex items-center justify-between md:px-20 px-0 h-16 md:h-24">
+                <div className="flex items-start justify-start">
+                    <Link href="/">
+                        <Image
+                            src="/asologo.png"
+                            alt="Aso company Logo"
+                            width={150}
+                            height={120}
+                            className="object-contain rounded-full md:w-[150px] w-[100px]"
+                            priority
+                        />
+                    </Link>
+                </div>
+                <div className="hidden md:flex items-center space-x-16 font-[500] text-[14px]">
+                    {navLinks.map(({ label, route }) => (
+                        <Link
+                            key={route}
+                            href={route}
+                            className={cn(
+                                "transition-transform font-bold",
+                                isActive(route) ? "text-[#981314]" : "text-[#08194A] hover:border-[#08194A] hover:scale-110 hover:border hover:px-4 hover:py-2 hover:rounded-[4px]"
+                            )}
+                        >
+                            {label}
                         </Link>
-                    </div>
-                    <div className="hidden md:flex items-center space-x-16 font-[500] text-[14px]">
+                    ))}
+                </div>
+                {/* Desktop CTA */}
+                <div className="hidden lg:flex">
+                    <Link href="/properties" className="w-full">
+                        <Button className="bg-[#981314] hover:bg-[#08194A] cursor-pointer text-white rounded-[5px] px-3 font-bold w-full">
+                            Explore Properties
+                        </Button>
+                    </Link>
+                </div>
+                {/* Mobile menu button */}
+                <button
+                    className="md:hidden text-white p-2 focus:outline-none mr-6"
+                    onClick={() => setIsMenuOpen((v) => !v)}
+                    aria-label="Toggle menu"
+                >
+                    {isMenuOpen ? <X className="h-6 w-6 text-[#0b1020]" /> : <Menu className="h-6 w-6 text-[#0b1020]" />}
+                </button>
+                {/* Mobile menu */}
+                <div
+                    className={cn(
+                        "absolute top-full left-0 right-0 bg-[#0b1020] border-[1px] border-[#232225] border-t-0 rounded-b-[20px] shadow-lg p-4 transition-all duration-300 transform md:hidden",
+                        isMenuOpen
+                            ? "opacity-100 translate-y-0"
+                            : "opacity-0 -translate-y-4 pointer-events-none"
+                    )}
+                >
+                    <div className="flex flex-col space-y-4">
                         {navLinks.map(({ label, route }) => (
                             <Link
                                 key={route}
                                 href={route}
                                 className={cn(
-                                    "transition-transform font-bold",
-                                    isActive(route) ? "text-[#981314]" : "text-[#08194A] hover:border-[#08194A] hover:scale-110 hover:border hover:px-4 hover:py-2 hover:rounded-[4px]"
+                                    "transition-transform px-4 font-bold",
+                                    isActive(route) ? "text-[#981314]" : "text-white hover:scale-110"
                                 )}
+                                onClick={() => setIsMenuOpen(false)}
                             >
                                 {label}
                             </Link>
                         ))}
-                    </div>
-                    {/* Desktop CTA */}
-                    <div className="hidden lg:flex">
-                        <Link href="/properties" className="w-full">
-                            <Button className="bg-[#981314] hover:bg-[#08194A] cursor-pointer text-white rounded-[5px] px-3 font-bold w-full">
-                                Explore Properties
-                            </Button>
-                        </Link>
-                    </div>
-                    {/* Mobile menu button */}
-                    <button
-                        className="md:hidden text-white p-2 focus:outline-none"
-                        onClick={() => setIsMenuOpen((v) => !v)}
-                        aria-label="Toggle menu"
-                    >
-                        {isMenuOpen ? <X className="h-6 w-6 text-[#0b1020]" /> : <Menu className="h-6 w-6 text-[#0b1020]" />}
-                    </button>
-                    {/* Mobile menu */}
-                    <div
-                        className={cn(
-                            "absolute top-full left-0 right-0 bg-[#0b1020] border-[1px] border-[#232225] border-t-0 rounded-b-[20px] shadow-lg p-4 transition-all duration-300 transform md:hidden",
-                            isMenuOpen
-                                ? "opacity-100 translate-y-0"
-                                : "opacity-0 -translate-y-4 pointer-events-none"
-                        )}
-                    >
-                        <div className="flex flex-col space-y-4">
-                            {navLinks.map(({ label, route }) => (
-                                <Link
-                                    key={route}
-                                    href={route}
-                                    className={cn(
-                                        "transition-transform px-4 font-bold",
-                                        isActive(route) ? "text-[#981314]" : "text-white hover:scale-110"
-                                    )}
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    {label}
+                        <div className="pt-2">
+                            <Button
+                                className="bg-[#981314] hover:bg-[#08194A] cursor-pointer text-white rounded-[10px] px-3 font-bold w-full"
+                                asChild
+                            >
+                                <Link href="/properties" onClick={() => setIsMenuOpen(false)}>
+                                    Explore Properties
                                 </Link>
-                            ))}
-                            <div className="pt-2">
-                                <Button
-                                    className="bg-[#981314] hover:bg-[#08194A] cursor-pointer text-white rounded-[10px] px-3 font-bold w-full"
-                                    asChild
-                                >
-                                    <Link href="/properties" onClick={() => setIsMenuOpen(false)}>
-                                        Explore Properties
-                                    </Link>
-                                </Button>
-                            </div>
+                            </Button>
                         </div>
                     </div>
                 </div>
+            </div>
         </nav>
     );
 }
