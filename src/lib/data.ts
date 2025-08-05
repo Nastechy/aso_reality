@@ -14,7 +14,7 @@ export type Property = {
 export const properties: Property[] = [
   {
     id: 1,
-    title: "Pearlview Residences Waru, Apo Topaz (Tafyi)",
+    title: "Pearlview Residences Apo, Waru ",
     location: "Apo",
     rating: 4.8,
     reviews: 348,
@@ -36,50 +36,29 @@ export const properties: Property[] = [
   },
   {
     id: 3,
-    title: "Casa Moderna, Wingate Estate",
+    title: "Casa Moderna",
     location: "Kuje",
     rating: 4.7,
     reviews: 189,
     area: "250 sqm, 350sqm, 450sqm,",
-    images: ["/Building3.jpg", "/Building3.jpg", "/Building3.jpg"],
+    images: ["/Building6.jpg", "/Building6.jpg", "/Building6.jpg"],
     tagColor: "bg-red-500",
     description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
     id: 4,
-    title: "Linkside City",
-    location: "Pyakasa",
-    rating: 4.6,
-    reviews: 412,
-    area: "250 sqm, 350sqm, 450sqm,",
-    images: ["/Building13.jpg", "/Building13.jpg", "/Building13.jpg"],
-    tagColor: "bg-orange-500",
-    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
-  },
-  {
-    id: 5,
     title: "Dynasty City Estate Guzape 2",
     location: "Guzape",
     rating: 4.5,
     reviews: 298,
     area: "250 sqm, 350sqm, 450sqm,",
-    images: ["/Building4.jpg", "/Building4.jpg", "/Building4.jpg"],
+    images: ["/Building3.jpg", "/Building3.jpg", "/Building3.jpg"],
     tagColor: "bg-red-500",
     description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
+
   {
-    id: 6,
-    title: "Double King Villa phase 1&2",
-    location: "Guzape 2",
-    rating: 5.0,
-    reviews: 156,
-    area: "250 sqm, 350sqm, 450sqm,",
-    images: ["/Building6.jpg", "/Building6.jpg", "/Building6.jpg"],
-    tagColor: "bg-purple-500",
-    description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
-  },
-  {
-    id: 7,
+    id: 5,
     title: "Grandeur City Aso. Ext",
     location: "Asokoro Ext.",
     rating: 4.8,
@@ -90,7 +69,7 @@ export const properties: Property[] = [
     description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
-    id: 8,
+    id: 6,
     title: "Royal Hills Aso. Ext",
     location: "Asokoro Ext.",
     rating: 4.4,
@@ -101,31 +80,31 @@ export const properties: Property[] = [
     description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
-    id: 9,
-    title: "Pearlview Residences Waru, Apo Topaz (Tafyi)",
+    id: 7,
+    title: "Apo Topaz (Tafyi)",
     location: "Apo",
     rating: 4.3,
     reviews: 181,
     area: "250 sqm, 350sqm, 450sqm,",
-    images: ["/Building9.jpg", "/Building9.jpg", "/Building9.jpg"],
+    images: ["/Building10.jpg", "/Building10.jpg", "/Building10.jpg"],
     tagColor: "bg-blue-500",
     description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
-    id: 10,
-    title: "Casa Moderna, Wingate Estate",
+    id: 8,
+    title: "Wingate Estate",
     location: "Kuje",
     rating: 4.9,
     reviews: 142,
     area: "250 sqm, 350sqm, 450sqm,",
-    images: ["/Building10.jpg", "/Building10.jpg", "/Building10.jpg"],
+    images: ["/Building9.jpg", "/Building9.jpg", "/Building9.jpg"],
     tagColor: "bg-orange-500",
     description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
   {
-    id: 11,
-    title: "Dynasty City Estate Guzape 2",
-    location: "Guzape",
+    id:9,
+    title: "Primlux Estate Apo",
+    location: "Apo",
     rating: 4.2,
     reviews: 221,
     area: "250 sqm, 350sqm, 450sqm,",
@@ -133,19 +112,6 @@ export const properties: Property[] = [
     tagColor: "bg-red-500",
     description: "These has different sizes, 250sqm for terrace duplex, 350sqm for semi-detached duplex, 450sqm for penthouses, 550sqm for fully detached duplex & 1000sqm for block of flat."
   },
-  // {
-  //   id: 12,
-  //   title: "Skyline Loft",
-  //   location: "Marina",
-  //   rating: 4.8,
-  //   reviews: 312,
-  //   bedrooms: 3,
-  //   bathrooms: 3,
-  //   area: "2,000 sqft",
-  //   images: ["/Building12.jpg", "/Building12.jpg", "/Building12.jpg"],
-  //   tagColor: "bg-purple-500",
-  //   description: "Modern skyline loft with breathtaking city views and floor-to-ceiling windows."
-  // }
 ];
 
 
