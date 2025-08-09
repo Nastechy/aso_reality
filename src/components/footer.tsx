@@ -131,13 +131,13 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                             © {new Date().getFullYear()} ASO Realty Limited. All rights reserved.
                         </p>
                         <div className="flex space-x-6 mt-4 md:mt-0 text-[12px]">
-                            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                            <a href="#" className="text-[12px] text-gray-400 hover:text-white transition-colors duration-200">
                                 Privacy Policy
                             </a>
-                            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                            <a href="#" className="text-[12px] text-gray-400 hover:text-white transition-colors duration-200">
                                 Terms of Service
                             </a>
-                            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                            <a href="#" className="text-[12px] text-gray-400 hover:text-white transition-colors duration-200">
                                 Cookie Policy
                             </a>
                         </div>
