@@ -73,13 +73,15 @@ const ContactSection: React.FC = () => {
                                         className="text-white underline text-[14px] md:text-base hover:text-[#ffd700] transition"
                                     >
                                         asorealtylimted@gmail.com
-                                    </a>                                </div>
+                                    </a>
+                                </div>
                                 <div className="flex items-center gap-3">
                                     <span className="bg-white/20 rounded-lg p-2 flex items-center">
                                         <MapPin className="md:w-5 md:h-5 h-3 w-3 text-white" />
                                     </span>
-                                    <span className="text-white text-[14px] md:text-base">C1, Amaka Mall, 9 San Zangon Daura Street, Guzape-Abuja</span>
-                                </div>
+                                    <span className="text-white text-[14px] md:text-base">C1, Amaka Mall, 9 San Zangon Daura Street, Guzape-Abuja
+                                    </span>
+                                </div>  
                             </div>
                         </div>
                         <div className="text-center mt-10 md:mt-20 hidden md:block " >

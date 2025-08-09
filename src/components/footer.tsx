@@ -128,7 +128,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                 <div className="mt-12 pt-8 border-t border-slate-800">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <p className="text-[12px] text-gray-400">
-                            © {new Date().getFullYear()} ASO Really Limited. All rights reserved.
+                            © {new Date().getFullYear()} ASO Realty Limited. All rights reserved.
                         </p>
                         <div className="flex space-x-6 mt-4 md:mt-0 text-[12px]">
                             <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
