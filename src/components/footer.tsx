@@ -2,12 +2,16 @@
 
 import React from 'react';
 import { Twitter, Facebook, Instagram, Github } from 'lucide-react';
+import { useCookieConsent } from './cookies/CookieConsent';
 
 interface FooterProps {
     className?: string;
 }
 
 const Footer: React.FC<FooterProps> = ({ className = '' }) => {
+
+    const { openSettings } = useCookieConsent();
+
     return (
         <footer className={`bg-[#08194A] text-white py-12 px-6 ${className}`}>
             <div className="max-w-7xl mx-auto">
@@ -137,9 +141,9 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                             <a href="#" className="text-[12px] text-gray-400 hover:text-white transition-colors duration-200">
                                 Terms of Service
                             </a>
-                            <a href="#" className="text-[12px] text-gray-400 hover:text-white transition-colors duration-200">
+                            <p onClick={openSettings} className="text-[12px] cursor-pointer text-gray-400 hover:text-white transition-colors duration-200">
                                 Cookie Policy
-                            </a>
+                            </p>
                         </div>
                     </div>
                 </div>

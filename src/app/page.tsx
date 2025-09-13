@@ -1,4 +1,5 @@
 import FeaturedPropertiesSection from "@/components/FeaturedProperties";
+import FloatingActions from "@/components/FloatingActions";
 import About from "@/components/aboutContent";
 import ContactSection from "@/components/contactus";
 import Footer from "@/components/footer";
@@ -41,6 +42,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen relative">
+      <FloatingActions />
       <div className="">
         <Hero />
         <StatsComponent />

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import OrganizationJsonLd from "@/components/OrganizationJsonLd";
+import { CookieConsentProvider } from "@/components/cookies/CookieConsent";
+import AnalyticsScripts from "@/components/cookies/AnalyticsScripts";
+import CookieBanner from "@/components/cookies/CookieBanner";
+import CookieSettingsModal from "@/components/cookies/CookieSettingsModal";
 
 
 
@@ -27,7 +31,12 @@ export default function RootLayout({
         <OrganizationJsonLd />
       </head>
       <body >
-        {children}
+        <CookieConsentProvider>
+          {children}
+          <AnalyticsScripts />
+          <CookieBanner />
+          <CookieSettingsModal />
+        </CookieConsentProvider>
       </body>
     </html>
   );
