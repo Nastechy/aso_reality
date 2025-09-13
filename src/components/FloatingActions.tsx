@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, CSSProperties } from "react";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,6 +10,9 @@ const PHONE = "+2348037616518";
 const EMAIL = "asorealtylimted@gmail.com";
 const MAPS_URL =
     "https://www.google.com/maps/search/?api=1&query=C1,+Amaka+Mall,+9+San+Zangon+Daura+Street,+Guzape,+Abuja,+Nigeria,+900211";
+
+type HeartbeatStyle = CSSProperties & { ["--hb-delay"]?: string };
+const hbDelay = (delay: string): HeartbeatStyle => ({ ["--hb-delay"]: delay });
 
 const FloatingActions: React.FC = () => {
     const [showWhatsApp, setShowWhatsApp] = useState(false);
@@ -48,7 +51,6 @@ const FloatingActions: React.FC = () => {
           animation: aso-heartbeat 1.6s ease-in-out infinite;
           transform-origin: center center;
           will-change: transform;
-          /* Allow per-icon delay */
           animation-delay: var(--hb-delay, 0s);
         }
         @media (prefers-reduced-motion: reduce) {
@@ -68,7 +70,7 @@ const FloatingActions: React.FC = () => {
                     >
                         <MapPin
                             className="h-4 w-4 text-white animate-asorealty-heartbeat"
-                            style={{ ["--hb-delay" as any]: "0s" }}
+                            style={hbDelay("0s")}
                             strokeWidth={1.75}
                         />
                     </button>
@@ -79,7 +81,7 @@ const FloatingActions: React.FC = () => {
                         <div className="h-9 w-9 md:h-10 md:w-10 rounded-full bg-[#08194A] hover:bg-[#08184ad6] transition-all shadow-md flex items-center justify-center ring-1 ring-white/10 backdrop-blur">
                             <MailIcon
                                 className="h-4 w-4 text-white animate-asorealty-heartbeat"
-                                style={{ ["--hb-delay" as any]: "0.1s" }}
+                                style={hbDelay("0.1s")}
                                 strokeWidth={1.75}
                             />
                         </div>
@@ -91,7 +93,7 @@ const FloatingActions: React.FC = () => {
                         <div className="h-9 w-9 md:h-10 md:w-10 rounded-full bg-[#61636A] hover:bg-neutral-900 transition-all shadow-md flex items-center justify-center ring-1 ring-white/10 backdrop-blur">
                             <Phone
                                 className="h-4 w-4 text-white animate-asorealty-heartbeat"
-                                style={{ ["--hb-delay" as any]: "0.2s" }}
+                                style={hbDelay("0.2s")}
                                 strokeWidth={1.75}
                             />
                         </div>
@@ -99,11 +101,11 @@ const FloatingActions: React.FC = () => {
                 )}
 
                 {showWhatsApp && (
-                    <Link href="https://wa.me/+2348037616518" aria-label="WhatsApp">
+                    <Link href="https://wa.me/2348037616518" aria-label="WhatsApp">
                         <div className="h-9 w-9 md:h-10 md:w-10 rounded-full bg-emerald-600/80 hover:bg-emerald-600 transition-all shadow-md flex items-center justify-center ring-1 ring-white/10 backdrop-blur">
                             <MessageCircle
                                 className="h-4 w-4 text-white animate-asorealty-heartbeat"
-                                style={{ ["--hb-delay" as any]: "0.3s" }}
+                                style={hbDelay("0.3s")}
                                 strokeWidth={1.75}
                             />
                         </div>
@@ -118,7 +120,7 @@ const FloatingActions: React.FC = () => {
                 >
                     <MessageCircle
                         className="h-4 w-4 md:h-5 md:w-5 text-white animate-asorealty-heartbeat"
-                        style={{ ["--hb-delay" as any]: "0.4s" }}
+                        style={hbDelay("0.4s")}
                         strokeWidth={1.75}
                         aria-hidden="true"
                     />
