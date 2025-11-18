@@ -1,12 +1,14 @@
 "use client"
 
 import React from 'react';
-import { Twitter, Facebook, Instagram, Github } from 'lucide-react';
+import { Facebook, Instagram, Twitter, } from 'lucide-react';
 import { useCookieConsent } from './cookies/CookieConsent';
 
 interface FooterProps {
     className?: string;
 }
+
+
 
 const Footer: React.FC<FooterProps> = ({ className = '' }) => {
 
@@ -23,38 +25,47 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                         <p className="text-sm text-gray-400 leading-relaxed mb-6">
                             ASO Realty Limited (RC: 7917733) is dedicated to
                             making property ownership accessible, secure, and
-                             straightforward, helping you invest confidently in your future.
+                            straightforward, helping you invest confidently in your future.
                         </p>
 
                         <div className="flex space-x-4">
-                            <a
+                            {/* <a
                                 href="#"
                                 className="text-gray-400 hover:text-white transition-colors duration-200"
-                                aria-label="Twitter"
+                                aria-label="X (Twitter)"
+                                target="_blank"
+                                rel="noreferrer"
                             >
                                 <Twitter size={20} />
-                            </a>
-                            <a
-                                href="#"
-                                className="text-gray-400 hover:text-white transition-colors duration-200"
-                                aria-label="Facebook"
-                            >
-                                <Facebook size={20} />
-                            </a>
-                            <a
-                                href="#"
+                            </a> */}
+                             <a
+                                href="https://www.instagram.com/asorealty_limited?igsh=MTU5Mm82N29vbTdzcg=="
                                 className="text-gray-400 hover:text-white transition-colors duration-200"
                                 aria-label="Instagram"
+                                target="_blank"
+                                rel="noreferrer"
                             >
                                 <Instagram size={20} />
                             </a>
                             <a
+                                href="https://www.facebook.com/share/17SjMs6VYp/"
+                                className="text-gray-400 hover:text-white transition-colors duration-200"
+                                aria-label="Facebook"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <Facebook size={20} />
+                            </a>
+                           
+                            {/* <a
                                 href="#"
                                 className="text-gray-400 hover:text-white transition-colors duration-200"
                                 aria-label="Github"
+                                target="_blank"
+                                rel="noreferrer"
                             >
                                 <Github size={20} />
-                            </a>
+                            </a> */}
                         </div>
                     </div>
 
