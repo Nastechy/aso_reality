@@ -64,7 +64,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                         </h3>
                         <ul className="space-y-3">
                             <li>
-                                <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                                <a href="/aboutUs" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
                                     About
                                 </a>
                             </li>
@@ -87,7 +87,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                         </h3>
                         <ul className="space-y-3">
                             <li>
-                                <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                                <a href="/contactUs" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
                                     Customer Support
                                 </a>
                             </li>
@@ -102,7 +102,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+                                <a href="/privacy-policy" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
                                     Privacy Policy
                                 </a>
                             </li>
@@ -135,7 +135,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                             © {new Date().getFullYear()} ASO Realty Limited. All rights reserved.
                         </p>
                         <div className="flex space-x-6 mt-4 md:mt-0 text-[12px]">
-                            <a href="#" className="text-[12px] text-gray-400 hover:text-white transition-colors duration-200">
+                            <a href="/privacy-policy" className="text-[12px] text-gray-400 hover:text-white transition-colors duration-200">
                                 Privacy Policy
                             </a>
                             <a href="#" className="text-[12px] text-gray-400 hover:text-white transition-colors duration-200">
