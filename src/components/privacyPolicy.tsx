@@ -350,14 +350,14 @@ export default function PrivacyPolicy() {
                             <div className="space-y-1.5">
                                 <p>
                                     <span className="font-medium text-slate-800">Name:</span>{" "}
-                                    _______________________
-                                </p>
-                                <p>
-                                    <span className="font-medium text-slate-800">Email:</span>{" "}
-                                    _______________________
+                                    Stella Onyeche Omepa
                                 </p>
                                 <p>
                                     <span className="font-medium text-slate-800">Phone:</span>{" "}
+                                    08065320655
+                                </p>
+                                <p>
+                                    <span className="font-medium text-slate-800">Email:</span>{" "}
                                     _______________________
                                 </p>
                                 <p>
